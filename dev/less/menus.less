@@ -1,0 +1,45 @@
+
+.menu-horizontal {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      text-align: center;
+      min-width: 200px;
+      cursor: pointer;
+      padding: 10px;
+      background-color: lightblue;
+      display: inline-block;
+      &:hover {
+        background-color: cornflowerblue;
+      }
+      &.active{
+        background-color: #ffe28e;
+        color: @black;
+      }
+    }
+  }
+}
+
+.menu-vertical {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      cursor: pointer;
+      max-width: 200px;
+      display: block;
+      padding: 10px;
+      background-color: lightblue;
+      &:hover {
+        background-color: cornflowerblue;
+      }
+      &.active{
+        background-color: #ffe28e;
+        color: @black;
+      }
+    }
+  }
+}
