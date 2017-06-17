@@ -21,7 +21,6 @@
 </head>
 <body>
 <div class="app-holder">
-bababaoiuhuhd
     <article>
         <main>
             <header>
