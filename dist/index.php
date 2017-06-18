@@ -31,21 +31,21 @@
                 </figure>
                 <nav class="menu-horizontal">
                     <ul>
-                        <li>menu 1</li>
-                        <li>menu 2</li>
-                        <li>menu 3</li>
-                        <li class="active">menu 4</li>
-                        <li>menu 5</li>
+                        <li><i class="fa fa-random"></i> menu 1</li>
+                        <li><i class="fa fa-plug"></i> menu 2</li>
+                        <li><i class="fa fa-paper-plane"></i> menu 3</li>
+                        <li class="active"><i class="fa fa-eye"></i> menu 4</li>
+                        <li><i class="fa fa-pencil"></i> menu 5</li>
                     </ul>
                 </nav>
                 <span class="row"></span>
                 <nav class="menu-vertical">
                     <ul>
-                        <li>menu 1</li>
-                        <li>menu 2</li>
-                        <li>menu 3</li>
-                        <li class="active">menu 4</li>
-                        <li>menu 5</li>
+                        <li><i class="fa fa-file-excel-o"></i> menu 1</li>
+                        <li><i class="fa fa-file-pdf-o"></i> menu 2</li>
+                        <li><i class="fa fa-file-word-o"></i> menu 3</li>
+                        <li class="active"><i class="fa fa-file-o"></i> menu 4</li>
+                        <li><i class="fa fa-file-video-o"></i> menu 5</li>
                     </ul>
                 </nav>
             </header>
