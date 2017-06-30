@@ -1,5 +1,35 @@
-.app-holder{
-  max-width: 1080px;
+
+.app-scaffod {
+  padding: 10px 4px;
+  max-width: @app-width;
   margin: 0 auto;
-  padding: 10px;
+}
+
+.app-header {
+  .app-scaffod();
+  figure {
+    width: 300px;
+  }
+}
+
+.app-holder {
+  .app-scaffod();
+}
+
+.app-footer {
+  width: 100%;
+  background-color: @gray;
+  padding: 10px ;
+  position: absolute;
+  bottom: 0;
+  .app-container{
+    .app-scaffod();
+    a{
+      color: @white;
+    }
+    p{
+      text-align: right;
+    }
+  }
+
 }

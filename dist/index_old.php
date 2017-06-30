@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>:: Title ::</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="web page">
     <meta name="author" content="author">
     <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <script src="https://cdnjsgit add.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
     <!-- BOOTSTRAP Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,7 +17,7 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- GENERALS CSS -->
-    <link rel="stylesheet" href="/assets/css/generals.min.css">
+    <link rel="stylesheet" href="assets/css/generals.min.css">
 </head>
 <body>
 <div class="app-holder">
@@ -27,7 +29,25 @@
                     <img src="" alt="">
                     <figcaption>People who liked the article</figcaption>
                 </figure>
-                <nav></nav>
+                <nav class="menu-horizontal">
+                    <ul>
+                        <li><i class="fa fa-random"></i> menu 1</li>
+                        <li><i class="fa fa-plug"></i> menu 2</li>
+                        <li><i class="fa fa-paper-plane"></i> menu 3</li>
+                        <li class="active"><i class="fa fa-eye"></i> menu 4</li>
+                        <li><i class="fa fa-pencil"></i> menu 5</li>
+                    </ul>
+                </nav>
+                <span class="row"></span>
+                <nav class="menu-vertical">
+                    <ul>
+                        <li><i class="fa fa-file-excel-o"></i> menu 1</li>
+                        <li><i class="fa fa-file-pdf-o"></i> menu 2</li>
+                        <li><i class="fa fa-file-word-o"></i> menu 3</li>
+                        <li class="active"><i class="fa fa-file-o"></i> menu 4</li>
+                        <li><i class="fa fa-file-video-o"></i> menu 5</li>
+                    </ul>
+                </nav>
             </header>
             <section>
 
@@ -40,7 +60,7 @@
                 <h2>Semantic HTML </h2>
                 <p>just text <strong>denting force strong</strong></p>
                 <cite>this is a simple cite </cite>
-                <time pubdate datetime="2009-10-10T19:10-08:00">~1 hour ago</time>
+                <time datetime="2009-10-10T19:10-08:00">~1 hour ago</time>
                 <i>this is a tecnical term</i>
                 <b>boldy tyepe</b>
                 <em>this is with emphasis</em>
@@ -66,6 +86,8 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 <!-- GENERALS JS-->
-<script src="/assets/scripts/generals.min.js"></script>
+<script src="assets/scripts/generals.min.js"></script>
 </body>
 </html>
+
+

@@ -2,10 +2,41 @@ body {
   background-color: #353535;
   color: #f2f2f2;
 }
-.app-holder {
-  max-width: 1080px;
+.app-scaffod {
+  padding: 10px 4px;
+  max-width: 1028px;
   margin: 0 auto;
-  padding: 10px;
+}
+.app-header {
+  padding: 10px 4px;
+  max-width: 1028px;
+  margin: 0 auto;
+}
+.app-header figure {
+  width: 300px;
+}
+.app-holder {
+  padding: 10px 4px;
+  max-width: 1028px;
+  margin: 0 auto;
+}
+.app-footer {
+  width: 100%;
+  background-color: #666666;
+  padding: 10px ;
+  position: absolute;
+  bottom: 0;
+}
+.app-footer .app-container {
+  padding: 10px 4px;
+  max-width: 1028px;
+  margin: 0 auto;
+}
+.app-footer .app-container a {
+  color: #f2f2f2;
+}
+.app-footer .app-container p {
+  text-align: right;
 }
 .menu-horizontal ul {
   list-style-type: none;
