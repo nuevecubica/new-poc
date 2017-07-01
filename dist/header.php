@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>:: Title ::</title>
+    <title>:: nuevecubica POC ::</title>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,17 +23,7 @@
 <body>
 <header class="app-header">
     <figure>
-        <img src="assets/img/logo-nuevecubica-long-bw.svg" alt="">
+        <img src="assets/img/nuevecubica-poc-bw.svg" alt="">
     </figure>
-    <h1>nuevecubica POC</h1>
-
-    <nav class="menu-horizontal">
-        <ul>
-            <a href="pocs/html/html-semantico.php"><li><i class="fa fa-random"></i> html semantico</li></a>
-            <a href="pocs/gsap/3dtext.php"><li><i class="fa fa-plug"></i> ·3d TEXT</li></a>
-            <li><i class="fa fa-paper-plane"></i> menu 3</li>
-            <li class="active"><i class="fa fa-eye"></i> menu 4</li>
-            <li><i class="fa fa-pencil"></i> menu 5</li>
-        </ul>
-    </nav>
+    <h1>nuevecubica Proof Of Concept</h1>
 </header>

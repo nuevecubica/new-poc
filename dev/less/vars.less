@@ -3,10 +3,65 @@
 
 @black: #353535;
 @white: #f2f2f2;
+
+@ivory-black: #1d2731;
+
+@light-gray: #8b8b8b;
 @gray: #666666;
+@dark-gray: #4d4d4d;
 
-@app-bg: lightslategrey;
+@app-bg: #778899;
 
+@highlight: #ffe28e;
+@emphasize: #ff9728;
+@alert: #ff4d51;
+@safe: #92bc74;
+@dim: #e5ddbe;
+
+
+
+@blue: #81a9bb;
+@light-blue: #96c5da;
+@dark-blue: #617d89;
+
+@light-green: #a5dca4;
+@green: #8dbc8c;
+@dark-green: #648563;
+
+@light-yellow: #f6e187;
+@yellow: #e4d07c;
+@dark-yellow: #afa264;
+
+@light-orange: #ffb016;
+@orange: #e58e21;
+@dark-orange: #be771a;
+
+@light-red: #ff4127;
+@red: #dd3a25;
+@dark-red: #a82d1b;
+
+@light-purple: #e2a6ff;
+@purple: #b36ff4;
+@dark-purple: #704598;
+
+@light-cornblue: #65a7ff;
+@cornblue: #5c90e0;
+@dark-cornblue: #375685;
+
+@light-cyan: #7cddde;
+@cyan: #67babb;
+@dark-cyan: #448283;
+
+
+@sea: #68c3c0;
+@fog: #f7d9aa;
+
+.app-bg-grad(@color1,@color2,@color3,@opacity){
+  background: -moz-linear-gradient(top, rgba(@color1,@color2,@color3,@opacity) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(@color1,@color2,@color3,@opacity) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(@color1,@color2,@color3,@opacity) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6778899', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
 // MENU COLORS
 
 //sizes

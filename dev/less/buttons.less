@@ -1,0 +1,68 @@
+.btn-separation {
+  margin: 5px;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+  .btn-separation();
+  a {
+    color: white;
+  }
+  &:hover {
+    a {
+      color: white;
+    }
+  }
+  &.back {
+    background-color: @red;
+    color: @white;
+    &:hover {
+      background-color: @dark-red;
+      color: @white;
+    }
+  }
+  &.html5 {
+    background-color: @dark-gray;
+    &:hover {
+      background-color: @dark-gray + 25;
+    }
+  }
+  &.fx {
+    background-color: @ivory-black;
+    &:hover {
+      background-color: @ivory-black + 25;
+    }
+  }
+}
+
+.color-code {
+  padding: 10px;
+  display: inline-block;
+  background-color: @dark-gray;
+  cursor: pointer;
+ .btn-separation();
+  &.html5 {
+    background-color: @dark-gray;
+  }
+  &.css {
+    background-color: @dark-green;
+  }
+  &.fx {
+    background-color: @ivory-black;
+  }
+  &.js {
+    background-color: @cornblue;
+  }
+  &.php {
+    background-color: @red;
+  }
+  &.mysql {
+    background-color: @purple;
+  }
+
+  &.active {
+    background-color: rgba(255, 255, 255, .6);
+    color: @black;
+  }
+}
