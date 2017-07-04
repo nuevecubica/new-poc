@@ -9,6 +9,15 @@ button {
   a {
     color: white;
   }
+  &.right {
+    float: right;
+    background-color: @orange;
+    &:hover {
+      background-color: @dark-orange;
+      color: @white;
+    }
+
+  }
   &:hover {
     a {
       color: white;
@@ -19,6 +28,14 @@ button {
     color: @white;
     &:hover {
       background-color: @dark-red;
+      color: @white;
+    }
+  }
+  &.back-tut {
+    background-color: @green;
+    color: @white;
+    &:hover {
+      background-color: @dark-green;
       color: @white;
     }
   }
@@ -34,6 +51,12 @@ button {
       background-color: @ivory-black + 25;
     }
   }
+  &.php {
+    background-color: @red;
+    &:hover {
+      background-color: @red + 25;
+    }
+  }
 }
 
 .color-code {
@@ -41,7 +64,7 @@ button {
   display: inline-block;
   background-color: @dark-gray;
   cursor: pointer;
- .btn-separation();
+  .btn-separation();
   &.html5 {
     background-color: @dark-gray;
   }

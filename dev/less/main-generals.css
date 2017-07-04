@@ -13,6 +13,14 @@ button {
 button a {
   color: white;
 }
+button.right {
+  float: right;
+  background-color: #e58e21;
+}
+button.right:hover {
+  background-color: #be771a;
+  color: #f2f2f2;
+}
 button:hover a {
   color: white;
 }
@@ -22,6 +30,14 @@ button.back {
 }
 button.back:hover {
   background-color: #a82d1b;
+  color: #f2f2f2;
+}
+button.back-tut {
+  background-color: #8dbc8c;
+  color: #f2f2f2;
+}
+button.back-tut:hover {
+  background-color: #648563;
   color: #f2f2f2;
 }
 button.html5 {
@@ -35,6 +51,12 @@ button.fx {
 }
 button.fx:hover {
   background-color: #36404a;
+}
+button.php {
+  background-color: #dd3a25;
+}
+button.php:hover {
+  background-color: #f6533e;
 }
 .color-code {
   padding: 10px;
@@ -157,6 +179,90 @@ html {
 .no-bullet {
   list-style-type: none;
   padding: 0;
+}
+a {
+  color: #4d4d4d;
+}
+a:hover {
+  color: #617d89;
+  text-decoration: none;
+}
+input[type=text],
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #666666;
+}
+.theform {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: #666666;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.2), 0 0 0 12px rgba(222, 226, 211, 0.8);
+}
+@media (max-width: 480px) {
+  .theform {
+    box-shadow: none;
+  }
+}
+.form-holder {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 4px;
+}
+.form-zone {
+  padding: 10px;
+}
+.form-zone-fb {
+  border-top: 2px solid #a2a2a2;
+}
+.form-zone-new-account {
+  text-align: center;
+  background-color: rgba(16, 121, 232, 0.2);
+  border-top: 2px solid white;
+}
+.form-zone-new-account p {
+  font-weight: bold;
+  color: #617d89;
+}
+.form-zone-got-account {
+  text-align: center;
+  background-color: rgba(16, 121, 232, 0.2);
+  border-top: 2px solid white;
+}
+.form-zone-got-account p {
+  font-weight: bold;
+  color: #617d89;
+}
+.form-password-holder .password-lock {
+  float: right;
+  font-size: 14px;
+  cursor: pointer;
+  color: #666666;
+}
+.form-password-holder .password-lock span {
+  float: right;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  vertical-align: middle;
+}
+#formNewUser {
+  display: none;
+}
+.pass-reminder {
+  display: none;
+}
+#confirm .confirm-holder {
+  text-align: center;
+  background-color: rgba(16, 121, 232, 0.2);
 }
 .menu-horizontal ul {
   list-style-type: none;

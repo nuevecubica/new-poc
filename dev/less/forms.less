@@ -1,0 +1,118 @@
+// FORM ELEMENTS
+
+a {
+  color: @dark-gray;
+  &:hover {
+    color: @dark-blue;
+    text-decoration: none;
+  }
+}
+
+input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: @gray;
+}
+
+input:focus {
+  // outline:none;
+  // outline-style: hidden;
+}
+
+.theform {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: @gray;
+  background-color: @white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.2), 0 0 0 12px rgba(222, 226, 211, 0.8);
+}
+@media (max-width: 480px){
+  .theform{
+    box-shadow: none;
+  }
+}
+
+.form-holder {
+  background-color: @black-20;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.input-grpup {
+  span {
+
+  }
+}
+.form-zone {
+  padding: 10px;
+}
+
+.form-zone-fb {
+  border-top: 2px solid @gray + 60;
+}
+
+.form-zone-new-account {
+  text-align: center;
+  background-color: rgba(16, 121, 232, 0.2);
+  border-top: 2px solid white;
+  p{
+    font-weight: bold;
+    color: @dark-blue;
+  }
+}
+.form-zone-got-account {
+  text-align: center;
+  background-color: rgba(16, 121, 232, 0.2);
+  border-top: 2px solid white;
+  p{
+    font-weight: bold;
+    color: @dark-blue;
+  }
+}
+.form-password-holder {
+
+  .password-lock {
+    float: right;
+    font-size: 14px;
+    cursor: pointer;
+    color: @gray;
+    span {
+      float: right;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      vertical-align: middle;
+    }
+  }
+
+}
+
+// FORM LOGIN
+
+#formlogin {
+
+}
+
+#formNewUser {
+  display: none;
+
+}
+
+.pass-reminder {
+  display: none;
+}
+
+// CONFIRM
+
+#confirm{
+  .confirm-holder{
+    text-align: center;
+    background-color: rgba(16, 121, 232, 0.2);
+  }
+}

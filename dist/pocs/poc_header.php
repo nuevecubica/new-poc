@@ -32,7 +32,7 @@ $thisServer = '/';
 <body>
 <header class="app-header">
     <figure>
-        <img src="/assets/img/logo-nuevecubica-long-bw.svg" alt="">
+        <img src="/assets/img/nuevecubica-poc-bw.svg" alt="">
     </figure>
     <h1>nuevecubica POC / <?php echo $pagename; ?></h1>
 
