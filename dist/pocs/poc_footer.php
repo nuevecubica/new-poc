@@ -1,6 +1,9 @@
 <footer class="app-footer">
     <div class="app-container">
-        <p>design by <span><a href="https://nuevecubica.net">nuevecubica</a></span> © 2017</p>
+        <figure>
+            <img src="/assets/img/logo-nuevecubica-long-bw.svg" alt="logo nuevecubica footer">
+        </figure>
+        <p>design by <span><a href="https://nuevecubica.net">nuevecubica</a></span> © copyright <?php date("Y",time()); ?></p>
     </div>
 </footer>
 <!-- JQUERY -->

@@ -99,6 +99,12 @@ h2,
 h3 {
   font-family: 'Josefin Sans', sans-serif;
 }
+h1.error-php,
+h2.error-php,
+h3.error-php {
+  color: #e58e21;
+  text-align: center;
+}
 strong {
   color: #ffe28e;
 }
@@ -153,6 +159,11 @@ html {
   top: 100%;
 }
 .app-footer figure {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 20px;
+}
+.app-footer figure img {
   width: 200px;
 }
 .app-footer .app-container {
@@ -160,7 +171,7 @@ html {
   max-width: 1028px;
   margin: 0 auto;
   background-color: #666666;
-  padding: 10px;
+  padding: 10px 20px 20px;
 }
 .app-footer .app-container p {
   margin: 0;
@@ -220,6 +231,10 @@ input[type=password] {
 }
 .form-zone {
   padding: 10px;
+}
+.form-zone p {
+  color: #a82d1b;
+  font-weight: bold;
 }
 .form-zone-fb {
   border-top: 2px solid #a2a2a2;
@@ -307,6 +322,23 @@ input[type=password] {
 .menu-vertical ul li.active {
   background-color: #ffe28e;
   color: #353535;
+}
+table {
+  width: 100%;
+  font-size: 12px;
+}
+table th {
+  padding: 10px;
+  background-color: #4d4d4d;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+table td {
+  padding: 10px;
+  font-size: 10px;
+}
+table tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 600px) {
   body {

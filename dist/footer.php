@@ -10,10 +10,12 @@
             <div class="color-code mysql"><i class="fa fa-file-text" aria-hidden="true"></i> MYSQL</div>
         </span>
         <div class="spacer"></div>
-        <p>design by <span><a href="https://nuevecubica.net">nuevecubica</a></span> © 2017</p>
+        <hr>
         <figure>
             <img src="assets/img/logo-nuevecubica-long-bw.svg" alt="logo nuevecubica footer">
         </figure>
+        <p>design by <span><a href="https://nuevecubica.net">nuevecubica</a></span> © copyright <?php date("Y",time()); ?></p>
+
     </div>
 </footer>
 <!-- JQUERY -->

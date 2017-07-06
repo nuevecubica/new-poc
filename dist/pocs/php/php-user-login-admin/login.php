@@ -1,6 +1,34 @@
 <?php
 $pagename = "PHP User Login Admin";
-include_once('../../poc_header.php');
+$DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
+require_once($DAO . 'init.php');
+
+include_layout_elemeent('poc_header.php');
+
+
+if ($session->is_logged_in()) {
+    redirect_to("index.php");
+}
+
+
+if (isset($_POST['user-login'])) {
+    $user_name = trim($_POST['user_name']);
+    $user_password = trim($_POST['user_password']);
+    $message = $user_name. ' '. $user_password;
+    // Check database to see if username/password exist.
+    $found_user = User::authenticate($user_name, $user_password);
+
+    if ($found_user) {
+        $session->login($found_user);
+        redirect_to("index.php");
+    } else {
+        // username/password combo was not found in the database
+        $message = "Conbinación Usuario/Contraseña erronea.";
+    }
+} else { // Form has not been submitted.
+    $user_name = "";
+    $user_password = "";
+}
 ?>
     <div class="app-holder">
         <article>
@@ -9,15 +37,19 @@ include_once('../../poc_header.php');
             <button class="btn back-tut "><a href="index.php"><i class="fa fa-arrow-circle-o-left"></i> Go back to Tutorial</a></button>
             <div class="spacer"></div>
             <h2>Login Form</h2>
+            <p>You been redirected here becuase your are not log in....</p>
+            <p>Plesase log in or create an account to log in....</p>
+
+            <div class="spacer"></div>
             <!-- LOGIN FORM -->
             <div id="formLogin" class="theform">
-                <form class="form-login" action="/user-login" method="post">
+                <form class="form-login" action="login.php" method="post">
                     <header><h2>Ingresar</h2></header>
                     <div class="form-zone standard-user-login">
-                        <input class="" type="email" placeholder="Correo Electrónico" name="user_email" value="" data-parsley-maxlength="42">
+                        <input class="" type="text" placeholder="nombre" name="user_name" data-parsley-maxlength="42" value="<?php echo htmlentities($user_name); ?>">
                         <div class="form-password-holder">
                             <div id="lock-password-login" class="password-lock fa fa-lock" aria-hidden="true"><span>&nbsp; ver contraseña </span></div>
-                            <input id="userPasswordA" class="passwordVisible" type="password" placeholder="Contraseña" name="user_password">
+                            <input id="userPasswordA" class="passwordVisible" type="password" placeholder="Contraseña" name="user_password" value="<?php echo htmlentities($user_password); ?>">
                         </div>
 
                         <button class="btn btn-green" type="submit" name="user-login">Enviar</button>
@@ -28,7 +60,8 @@ include_once('../../poc_header.php');
                     </div>-->
                 </form>
                 <div class="form-zone">
-
+                   <p><?php echo output_message($message); ?></p>
+                    <div class="spacer"></div>
                 </div>
                 <div class="form-zone form-zone-new-account">
                     <p>¿No tienes cuenta?</p>
@@ -63,5 +96,9 @@ include_once('../../poc_header.php');
         </article>
     </div>
 <?php
-include_once('../../poc_footer.php');
+if (isset($db)) {
+    $db->close_connection();
+}
+include_layout_elemeent('poc_footer.php');
+
 ?>

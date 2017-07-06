@@ -1,4 +1,4 @@
-/*! newpoc - v1.0.0 - 2017-07-03 */'use strict';
+/*! newpoc - v1.0.0 - 2017-07-05 */'use strict';
 
 console.log('nuevecubica pocs main scripts');
 

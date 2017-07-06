@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+  font-size: 12px;
+  th {
+    padding: 10px;
+    background-color: @dark-gray;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  td {
+    padding: 10px;
+    font-size: 10px;
+  }
+  tr {
+    &:nth-child(odd) {
+      background-color: @black-20;
+    }
+  }
+}
