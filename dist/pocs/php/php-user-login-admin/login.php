@@ -4,11 +4,9 @@ $DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
 require_once($DAO . 'init.php');
 include_layout_elemeent('poc_header.php');
 
-
 if ($session->is_logged_in()) {
     redirect_to("index.php");
 }
-
 
 if (isset($_POST['user-login'])) {
     $user_name = trim($_POST['user_name']);
