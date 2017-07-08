@@ -1,13 +1,15 @@
 <?php
+
+$DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
+require_once($DAO . 'init.php');
+include_layout_elemeent('poc_header.php');
 $pagename = "PHP User Login Admin";
-include_once('../../poc_header.php');
-require_once ('../../../assets/dao/functions.php');
-require_once ('../../../assets/dao/session.php');
+
 If(!$session->is_logged_in()) { redirect_to("login.php"); }
 ?>
 <div class="app-holder">
     <article>
-
+<button class="btn"><a href="logout.php">logout</a></button>
         <button class="btn right "><a href="login.php"><i class="fa fa-arrow-circle-o-right"></i> go to demo</a></button>
         <div class="spacer"></div>
         <h2><?php echo $_SESSION['user_id']?></h2>

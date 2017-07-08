@@ -2,7 +2,6 @@
 $pagename = "PHP User Login Admin";
 $DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
 require_once($DAO . 'init.php');
-
 include_layout_elemeent('poc_header.php');
 
 
