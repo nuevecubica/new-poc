@@ -118,6 +118,14 @@ a {
 a:hover {
   text-decoration: none;
 }
+span.span-code {
+  color: #f6e187;
+}
+span.span-code b {
+  color: #8dbc8c;
+  font-weight: bold;
+  font-size: 14px;
+}
 html {
   position: relative;
   min-height: 100%;

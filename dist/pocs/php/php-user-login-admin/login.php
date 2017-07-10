@@ -31,11 +31,11 @@ if (isset($_POST['user-login'])) {
         <article>
             <button class="btn right "><a href="admin.php"><i class="fa fa-arrow-circle-o-right"></i> Go to Admin</a></button>
 
-            <button class="btn back-tut "><a href="index.php"><i class="fa fa-arrow-circle-o-left"></i> Go back to Tutorial</a></button>
+           <!-- <button class="btn back-tut "><a href="index.php"><i class="fa fa-arrow-circle-o-left"></i> Go back to Tutorial</a></button>-->
             <div class="spacer"></div>
             <h2>Login Form</h2>
             <p>You been redirected here becuase your are not log in....</p>
-            <p>Plesase log in or create an account to log in....</p>
+            <p>Please log in or create an account to get to the user area....</p>
 
             <div class="spacer"></div>
             <!-- LOGIN FORM -->
