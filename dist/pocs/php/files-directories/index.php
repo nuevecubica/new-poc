@@ -27,7 +27,11 @@ include_layout_elemeent('poc_header.php');
         echo '<hr>';
         echo '<h2>File permissions</h2>';
         echo '<h3>OCTAL NOTATION </h3>';
-        echo '<p>RWX- 4210</p>';
+        echo '<p>User Group other</p>';
+        echo '<p>R = 4</p>';
+        echo '<p>w = 2</p>';
+        echo '<p>x = 1</p>';
+        echo '<p>none = -</p>';
         echo '<p>RWX = 7</p>';
         echo '<p>RW = 6</p>';
         echo '<p>R = 4</p>';
@@ -35,18 +39,95 @@ include_layout_elemeent('poc_header.php');
         echo '<p>ps aux | grep httpd</p>';
         echo '<hr>';
         echo '<p>chown / chmod</p>';
-        $owner_id =  fileowner('file_permissions.php');
-        $owner_array  = posix_geteuid($owner_id);
+        $owner_id = fileowner('file_permissions.php');
+        $owner_array = posix_geteuid($owner_id);
         echo $owner_array;
-
-
-
-
-
-
-
-
         ?>
+        <table style="text-align: center">
+            <tr>
+                <th colspan="4" style="color: lightgreen;"> SYMBOLIC NOTATION rwxrw-r-- </th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>User</th>
+                <th>Group</th>
+                <th>Other</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>READ r</td>
+                <td>Write w</td>
+                <td>execute x</td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td>yes</td>
+                <td>yes</td>
+                <td>yes</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>yes</td>
+                <td>yes</td>
+                <td>no</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>yes</td>
+                <td>no</td>
+                <td>no</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>rwx</td>
+                <td>rw-</td>
+                <td>r--</td>
+            </tr>
+        </table>
+        <table style="text-align: center">
+            <tr>
+                <th colspan="7" style="color:lightgreen;">
+                    OCTAL NOTATION 764
+                </th>
+            </tr>
+            <tr>
+                <td>r</td>
+                <td>=</td>
+                <td>4</td>
+                <td></td>
+                <td>rwx</td>
+                <td>=</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>w</td>
+                <td>=</td>
+                <td>2</td>
+                <td></td>
+                <td>rw</td>
+                <td>=</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>=</td>
+                <td>1</td>
+                <td></td>
+                <td>r</td>
+                <td>=</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>=</td>
+                <td>0</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
     </article>
 </div>
 <?php
