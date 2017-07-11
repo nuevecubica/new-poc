@@ -1,19 +1,11 @@
 <?php
-$pagename = "PHP User Admin";
+
 $DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
 require_once($DAO . 'init.php');
-include_layout_elemeent('poc_header.php');
-
-
+$pagename = "PHP User Admin";
+include_layout_element('poc_header.php');
 
 $user = User::find_by_id(16);
-
-
-
-
-
-
-
 
 ?>
     <div class="app-holder">
@@ -68,5 +60,5 @@ $user = User::find_by_id(16);
         </article>
     </div>
 <?php
-include_once('../../poc_footer.php');
+include_layout_element('poc_footer.php');
 ?>

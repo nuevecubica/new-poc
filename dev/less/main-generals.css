@@ -21,6 +21,14 @@ button.right:hover {
   background-color: #be771a;
   color: #f2f2f2;
 }
+button.orange {
+  background-color: #e58e21;
+  color: white;
+}
+button.orange:hover {
+  background-color: #be771a;
+  color: #f2f2f2;
+}
 button:hover a {
   color: white;
 }

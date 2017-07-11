@@ -117,8 +117,16 @@ function password_check($password, $existing_hash)
 /*******
  * @param $element
  */
-function include_layout_elemeent($element){
-    include(SITE_ELEMENTS.$element);
+function include_layout_element($element){
+    include_once(SITE_ELEMENTS.$element);
+}
+
+/*******
+ * @param $action
+ * @param string $message
+ */
+function log_actions($action,$message=""){
+
 }
 
 ?>

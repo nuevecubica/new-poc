@@ -2,8 +2,8 @@
 
 $DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
 require_once($DAO . 'init.php');
-include_layout_elemeent('poc_header.php');
-$pagename = "PHP User Login Admin";
+include_layout_element('poc_header.php');
+
 If (!$session->is_logged_in()) {
     redirect_to("login.php");
 }else{
@@ -23,5 +23,5 @@ If (!$session->is_logged_in()) {
     </article>
 </div>
 <?php
-include_layout_elemeent('poc_footer.php');
+include_layout_element('poc_footer.php');
 ?>

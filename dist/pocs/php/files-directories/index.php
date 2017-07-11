@@ -1,11 +1,15 @@
 <?php
+$pagename = "PHP FILES and DIRECTORIES";
+$fokker = "cha cha cha ";
 $DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
 require_once($DAO . 'init.php');
-include_layout_elemeent('poc_header.php');
+include_layout_element('poc_header.php');
 ?>
 <div class="app-holder">
     <article>
         <h2>SANDBOX PHP FILES</h2>
+        <button class="btn orange">algo</button>
+        <div class="spacer"></div>
         <?php
 
         echo '<span class="span-code"><b>__FILE__</b> is the file address: </span>' . __FILE__ . '<br>';
@@ -43,9 +47,10 @@ include_layout_elemeent('poc_header.php');
         $owner_array = posix_geteuid($owner_id);
         echo $owner_array;
         ?>
+
         <table style="text-align: center">
             <tr>
-                <th colspan="4" style="color: lightgreen;"> SYMBOLIC NOTATION rwxrw-r-- </th>
+                <th colspan="4" style="color: lightgreen;"> SYMBOLIC NOTATION rwxrw-r--</th>
             </tr>
             <tr>
                 <th></th>
@@ -128,11 +133,119 @@ include_layout_elemeent('poc_header.php');
                 <td></td>
             </tr>
         </table>
+        <div class="spacer"></div>
+        <?php
+        $filename = 'test.php';
+        $owner_array = posix_getpwuid(fileowner($filename));
+        echo 'owner of the file: ' . $owner_array['name'] . '<br>';
+
+        echo 'Decimal notation: ' . fileperms('test.php') . '<br>';
+        echo 'octal notation: ' . substr(decoct(fileperms('test.php')), 2);
+        echo '<br>';
+        chmod('test.php', 0644);
+        echo 'octal notation: ' . substr(decoct(fileperms('test.php')), 2);
+        echo '<br>';
+        echo 'is readable?';
+        echo '<br>';
+        echo is_readable('test.php') ? 'yes' : 'no';
+        echo '<br>';
+        echo 'is writable: ';
+        echo '<br>';
+        echo is_writable('test.php') ? 'yes' : 'no';
+        ?>
+        <div class="spacer"></div>
+        <pre>
+        <code class="PHP">
+           $filename = 'test.php';
+           $owner_array = posix_getpwuid(fileowner($filename));
+           echo $owner_array['name'];
+            //--------
+             $filename = 'test.php';
+        $owner_array = posix_getpwuid(fileowner($filename));
+        echo 'owner of the file: '.$owner_array['name'];
+
+        echo 'Decimal notation: '. fileperms('test.php');
+        echo 'octal notation: '. substr(decoct(fileperms('test.php')),2);
+            //---------
+        echo 'is readable?';
+
+        echo is_readable('test.php') ? 'yes' : 'no';
+
+        echo 'is writable: ';
+
+        echo is_writable('test.php') ? 'yes' : 'no';
+
+        </code>
+        </pre>
+        <div class="spacer"></div>
+        <h2>Accesing Files</h2>
+        <p>fopen(filename,mode) creates or edit a file depending of the permissions</p>
+        <table>
+            <tr>
+                <th colspan="4" style="text-align: center">FILE ACCESS MODES</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>read & write</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>r</td>
+                <td>Read from the start (must exist)</td>
+                <td>r+</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>w</td>
+                <td>Truncate / Write from start</td>
+                <td>w+</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>Append / Write fron end</td>
+                <td>a+</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>Write from the start (can't exist)</td>
+                <td>x+</td>
+                <td></td>
+            </tr>
+        </table>
+        <p>FILE MODE ENDINGS</p>
+        <ul>
+            <li>Windows <strong>\r\n</strong></li>
+            <li>Mac,linux, Unix <strong>\n</strong></li>
+        </ul>
+        <p>FILE MODE MODIFIERS</p>
+        <p><strong>t</strong> Translate Windows Line Endings (use \r\n)</p>
+        <p><strong>b</strong> Binary Mode (don't translate)</p>
+        <p><strong>b</strong> is the deffault since php 4.3.2</p>
+
+        <?php
+
+        $file = 'filetest.php';
+        if($handle = fopen($file,'w')){
+            fclose($handle);
+        }else{
+            echo '<p style="color:red">Could not open file for writting</p>';
+        }
+
+
+        ?>
     </article>
 </div>
 <?php
-include_layout_elemeent('poc_footer.php');
+include_layout_element('poc_footer.php');
 ?>
-
-
+<script>
+    $(document).ready(function () {
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
 
