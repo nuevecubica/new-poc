@@ -1,0 +1,3 @@
+inicio
+ a message from a var
+en el offset con un break
