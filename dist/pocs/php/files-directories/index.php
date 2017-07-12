@@ -227,7 +227,8 @@ include_layout_element('poc_header.php');
 
         <?php
 
-        $file = 'filetest.php';
+        $file = 'filetest.txt';
+
         if($handle = fopen($file,'w')){
             fclose($handle);
         }else{
@@ -247,5 +248,10 @@ include_layout_element('poc_footer.php');
             hljs.highlightBlock(block);
         });
     });
+
+
+    for(var i = 0; i <= 10; i++)
+        console.log(i);
+
 </script>
 
