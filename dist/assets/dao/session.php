@@ -4,6 +4,8 @@ class Session {
 
     private $logged_in = false;
     public $user_id;
+    public $user_name;
+    public $user_lastname;
 
     function __construct() {
         session_start();
@@ -22,6 +24,8 @@ class Session {
     public function login($user) {
         if ($user) {
             $this->user_id = $_SESSION['user_id'] = $user->user_id;
+            $this->user_name = $_SESSION['user_name'] = $user->user_name;
+            $this->user_lastname = $_SESSION['user_lastname'] = $user->user_lastname;
             $this->logged_in = true;
         }
     }

@@ -1,17 +1,17 @@
 <?php
 $pagename = "PHP FILES and DIRECTORIES";
-$fokker = "cha cha cha ";
+
 $DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
 require_once($DAO . 'init.php');
-include_layout_element('poc_header.php');
+//include_layout_element('poc_header.php');
+include_once ('../../poc_header.php');
 ?>
 <div class="app-holder">
     <article>
         <h2>SANDBOX PHP FILES</h2>
-        <button class="btn orange">algo</button>
+<!--        <button class="btn orange">algo</button>-->
         <div class="spacer"></div>
         <?php
-
         echo '<span class="span-code"><b>__FILE__</b> is the file address: </span>' . __FILE__ . '<br>';
         echo '<span class="span-code"><b>__LINE__</b> is where the  line code is at:  </span>' . __LINE__ . '<br>';
         echo '<span class="span-code"><b>dirname(__FILE__)</b> parse the directory out of <b>__FILE__</b> before PHP 5.3:  </span>' . dirname(__FILE__) . '<br>';
@@ -408,13 +408,102 @@ include_layout_element('poc_header.php');
         $file_read = 'filetest.txt';
         $content = "";
         if ($handle = fopen($file_read, 'r')) { // READ
-            while(!feof($handle)){
+            while (!feof($handle)) {
                 $content .= fgets($handle);
             }
             fclose($handle);
             echo nl2br($content);
         }
         ?>
+        <div class="spacer"></div>
+        <h2>File Details</h2>
+
+        <ul>
+            <li><strong>filemtime()</strong> last mofified</li>
+            <li><strong>filectime()</strong> last change</li>
+            <li><strong>fileatime()</strong> last accessed</li>
+            <li></li>
+            <li><strong>pathinfo()</strong> gives an array of information</li>
+        </ul>
+        <pre>
+            <code class="php">
+        // FILE SIZE
+        Echo 'The File size of: ' . $file . ' ' . filesize($file) . ' Bytes';
+        // FILE MODIFIED
+        Echo 'fileimtime(): last modified (change content) ' . strftime('%d/%m/%Y %H:%M', filemtime($file));
+        // FILE CHANGE
+        Echo 'fileictime(): last change (change content or metadata) ' . strftime('%d/%m/%Y %H:%M', filectime($file));
+        // FILE ACCESSED
+        Echo 'fileiatime(): last accessed (any read/change) ' . strftime('%d/%m/%Y %H:%M', fileatime($file)) ;
+
+        // PATHINFO
+        $path_components = pathinfo(__FILE__);
+        echo $path_components["dirname"] ;
+        echo $path_components["basename"];
+        echo $path_components["filename"];
+        echo $path_components["extension"];
+            </code>
+        </pre>
+        <div class="spacer"></div>
+        <?php
+
+        // FILE SIZE
+        Echo 'The File size of: ' . $file . ' ' . filesize($file) . ' Bytes<br>';
+        // FILE MODIFIED
+        Echo 'fileimtime(): last modified (change content) ' . strftime('%d/%m/%Y %H:%M', filemtime($file)) . '<br>';
+        // FILE CHANGE
+        Echo 'fileictime(): last change (change content or metadata) ' . strftime('%d/%m/%Y %H:%M', filectime($file)) . '<br>';
+        // FILE ACCESSED
+        Echo 'fileiatime(): last accessed (any read/change) ' . strftime('%d/%m/%Y %H:%M', fileatime($file)) . '<br>';
+        echo '<br>';
+        // PATHINFO
+        $path_components = pathinfo(__FILE__);
+        echo $path_components["dirname"] . '<br>';
+        echo $path_components["basename"] . '<br>';
+        echo $path_components["filename"] . '<br>';
+        echo $path_components["extension"] . '<br>';
+        ?>
+        <div class="spacer"></div>
+        <h2>Directories</h2>
+
+        <ul>
+            <li><strong>dirname()</strong> Directory name</li>
+            <li><strong>is_dir()</strong> Checks if is a Dir</li>
+            <li><strong>getcwd()</strong> Current Working Directory</li>
+
+        </ul>
+        <?php
+        // GET THE DIR NAME
+       // echo dirname(__FILE__);
+        echo '<br>';
+        // GET THE DIR NAME
+       // echo is_dir(__DIR__) ? 'YES' : 'NO';
+        echo '<br>';
+        // GET CURRENT DIRECTORY
+       // echo getcwd() . '<br>';
+
+
+        echo '<br>';
+        $new = file_exists('new')? false : true;
+        if($new){
+            mkdir('new', 0777); // 0777 PHP defaults
+        }else{
+            echo 'directory EXISTS';
+            chmod('new',0777);
+        }
+
+        /*
+          mkdir('new/test/test2',0777,true);
+          chmod('new/test',0777);
+          chmod('new/test/test2',0777);
+
+          chdir('new');
+          echo getcwd();
+          rmdir('test/test2');*/
+
+
+        ?>
+
     </article>
 </div>
 <?php

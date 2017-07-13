@@ -3,7 +3,8 @@
 $DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
 require_once($DAO . 'init.php');
 $pagename = "PHP User Login Admin";
-include_layout_element('poc_header.php');
+//include_layout_element('poc_header.php');
+include_once ('../../poc_header.php');
 
 
 
@@ -14,13 +15,16 @@ if ($session->is_logged_in()) {
 if (isset($_POST['user-login'])) {
     $user_name = trim($_POST['user_name']);
     $user_password = trim($_POST['user_password']);
-    $message = $user_name. ' '. $user_password;
+   // $message = $user_name. ' '. $user_password;
     // Check database to see if username/password exist.
     $found_user = User::authenticate($user_name, $user_password);
 
     if ($found_user) {
         $session->login($found_user);
-        redirect_to("index.php");
+
+       log_actions('<span class="login">Login</span>',"<span class='log-message'>{$found_user->user_name} {$found_user->user_lastname} </span>");
+
+       redirect_to("index.php");
     } else {
         // username/password combo was not found in the database
         $message = "Conbinación Usuario/Contraseña erronea.";
@@ -33,6 +37,7 @@ if (isset($_POST['user-login'])) {
     <div class="app-holder">
         <article>
             <button class="btn right "><a href="admin.php"><i class="fa fa-arrow-circle-o-right"></i> Go to Admin</a></button>
+            <button class="btn right "><a href="logfile.php"><i class="fa fa-arrow-circle-o-right"></i> log file</a></button>
 
            <!-- <button class="btn back-tut "><a href="index.php"><i class="fa fa-arrow-circle-o-left"></i> Go back to Tutorial</a></button>-->
             <div class="spacer"></div>

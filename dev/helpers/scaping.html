@@ -1,4 +1,4 @@
-<!-- DOCUMENT FOR SCAPING HTML CODE -->
+&lt;!-- DOCUMENT FOR SCAPING HTML CODE --&gt;
 &lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -64,3 +64,13 @@
 &lt;/footer&gt;
 &lt;/body&gt;
 &lt;/html&gt;
+
+&lt;form action="index.php" enctype="multipart/form-data" method="post"&gt;
+    &lt;input type="hidden" name="MAX_FILE_SIZE" value="1048576"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="exampleInputFile"&gt;File input&lt;/label&gt;
+        &lt;input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" name="file_upload"&gt;
+        &lt;small id="fileHelp" class="form-text text-muted"&gt;Escoje un archivo&lt;/small&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary" value="Upload"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;

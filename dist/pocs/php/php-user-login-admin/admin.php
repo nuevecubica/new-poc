@@ -3,7 +3,8 @@
 $DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
 require_once($DAO . 'init.php');
 $pagename = "PHP User Admin";
-include_layout_element('poc_header.php');
+//include_layout_element('poc_header.php');
+include_once ('../../poc_header.php');
 
 $user = User::find_by_id(16);
 

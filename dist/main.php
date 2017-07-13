@@ -22,5 +22,6 @@
         <button class="btn fx"><a href="pocs/effects/3dgame/index.php"><i class="fa fa-cog" aria-hidden="true"></i> 3d Game</a></button>
         <button class="btn php"><a href="pocs/php/php-user-login-admin/index.php"><i class="fa fa-file-text" aria-hidden="true"></i> PHP User Login</a></button>
         <button class="btn php"><a href="pocs/php/files-directories/index.php"><i class="fa fa-file-text" aria-hidden="true"></i> PHP files and directories</a></button>
+        <button class="btn php"><a href="pocs/php/file-upload/index.php"><i class="fa fa-file-text" aria-hidden="true"></i> PHP upload files </a></button>
     </nav>
 </div>

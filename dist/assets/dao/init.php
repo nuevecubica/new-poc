@@ -5,6 +5,8 @@ ini_set('display_errors', 1);
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 defined('SITE_DAO') ? null : define('SITE_DAO',  $_SERVER["DOCUMENT_ROOT"].'assets'.DS.'dao'.DS);
 defined('SITE_ELEMENTS') ? null : define('SITE_ELEMENTS', $_SERVER["DOCUMENT_ROOT"].'pocs'.DS);
+defined('SITE_ROOT') ? null : define('SITE_ROOT', $_SERVER["DOCUMENT_ROOT"].'pocs'.DS.'php'.DS.'php-user-login-admin'.DS);
+
 
 
 // CONFIG FILE

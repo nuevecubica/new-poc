@@ -2,12 +2,14 @@
 
 $DAO = $_SERVER["DOCUMENT_ROOT"] . 'assets/dao/';
 require_once($DAO . 'init.php');
-include_layout_element('poc_header.php');
+$pagename = "PHP User Index";
+//include_layout_element('poc_header.php');
+include_once ('../../poc_header.php');
 
 If (!$session->is_logged_in()) {
     redirect_to("login.php");
 }else{
-    $logged_user =get_object_vars(User::find_by_id($_SESSION['user_id']));
+    $logged_user = get_object_vars(User::find_by_id($_SESSION['user_id']));
 }
 
 
