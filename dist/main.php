@@ -23,5 +23,7 @@
         <button class="btn php"><a href="pocs/php/php-user-login-admin/index.php"><i class="fa fa-file-text" aria-hidden="true"></i> PHP User Login</a></button>
         <button class="btn php"><a href="pocs/php/files-directories/index.php"><i class="fa fa-file-text" aria-hidden="true"></i> PHP files and directories</a></button>
         <button class="btn php"><a href="pocs/php/file-upload/index.php"><i class="fa fa-file-text" aria-hidden="true"></i> PHP upload files </a></button>
+        <button class="btn js"><a href="pocs/js/googlemaps/index.php"><i class="fa fa-file-text" aria-hidden="true"></i> google maps </a></button>
     </nav>
+
 </div>

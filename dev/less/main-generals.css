@@ -66,6 +66,12 @@ button.php {
 button.php:hover {
   background-color: #f6533e;
 }
+button.js {
+  background-color: #5c90e0;
+}
+button.js:hover {
+  background-color: #75a9f9;
+}
 .color-code {
   padding: 10px;
   display: inline-block;
