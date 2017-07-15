@@ -1,3 +1,5 @@
 12/48/2017 19:48:01 | logs cleared: by user ID 
 12/03/2017 20:03:53 | <span class="login">Login</span>: <span class='log-message'>Kevin Skullmaster </span>
 12/04/2017 20:04:43 | <span class="logout">Logout</span>: <span class='log-message'>Kevin Skullmaster</span>
+14/34/2017 18:34:17 | <span class="login">Login</span>: <span class='log-message'>rapido Ramirez </span>
+14/34/2017 18:34:26 | <span class="logout">Logout</span>: <span class='log-message'>rapido Ramirez</span>

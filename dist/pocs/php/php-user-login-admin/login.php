@@ -17,6 +17,7 @@ if (isset($_POST['user-login'])) {
     $user_password = trim($_POST['user_password']);
    // $message = $user_name. ' '. $user_password;
     // Check database to see if username/password exist.
+
     $found_user = User::authenticate($user_name, $user_password);
 
     if ($found_user) {
@@ -32,6 +33,11 @@ if (isset($_POST['user-login'])) {
 } else { // Form has not been submitted.
     $user_name = "";
     $user_password = "";
+}
+
+If (isset($_POST['user_create'])){
+
+
 }
 ?>
     <div class="app-holder">
@@ -89,7 +95,7 @@ if (isset($_POST['user-login'])) {
                             <div id="lock-password-newuser" class="password-lock fa fa-lock" aria-hidden="true"><span>&nbsp;ver password&nbsp;</span></div>
                             <input id="userPasswordB" class="form-password" type="password" placeholder="Contraseña" name="user_password" required value="">
                         </div>
-                        <button class="form-login-btn-send btn btn-green" type="submit" name="user_save">Enviar</button>
+                        <button class="form-login-btn-send btn btn-green" type="submit" name="user_create">Enviar</button>
                         <button class="reset btn btn-blue" type="reset">Limpiar</button>
                     </div>
                     <div class="form-zone form-zone-got-account">

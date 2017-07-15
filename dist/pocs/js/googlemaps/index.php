@@ -114,7 +114,9 @@ include_once('../../poc_footer.php')
         var sedes = [
             ['Torre Mayor', 19.424172, -99.1777447, "Av. Reforma 505, piso 51 Col. Cuauhtémoc 06500, Ciudad de México","Lunes - Viernes"],
             ['Torre Diana', 19.4265043, -99.1742066, "Río Lerma 232, piso 7 (Sky Lobby) Col. Cuauhtémoc 06500, Ciudad de México","Sabados"],
-        ];
+            ['Trading Room', 19.3245633, -99.2567895,'Av. de las Torres No. 131, Alvaro Obregón, Olivar de los Padres, Torres de potrero, 01780 CDMX','Lunes - Sabado']
+
+    ];
 
         var imageIcon = {
             url: '/assets/img/target_googlemaps.png',

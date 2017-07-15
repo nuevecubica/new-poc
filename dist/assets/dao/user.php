@@ -1,7 +1,10 @@
 <?php
-require_once(SITE_DAO.'mysqldatabase.php');
+require_once(SITE_DAO . 'mysqldatabase.php');
 
-class User extends DatabaseObject{
+class User extends DatabaseObject {
+
+    protected static $table_name = "users";
+    protected static $db_fields = array("user_id",'user_name','user_lastname','user_middlename','user_nickname','user_fb_id','user_email','user_password','user_avatar','user_confirm','user_initial_date');
 
     public $user_id;
     public $user_name;
@@ -33,7 +36,6 @@ class User extends DatabaseObject{
         return !empty($result_array) ? array_shift($result_array) : false;
 
     }
-
 
 
 }
