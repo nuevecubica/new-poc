@@ -142,7 +142,7 @@ include_once ('../../poc_header.php');
         echo 'Decimal notation: ' . fileperms('test.php') . '<br>';
         echo 'octal notation: ' . substr(decoct(fileperms('test.php')), 2);
         echo '<br>';
-        chmod('test.php', 0644);
+        chmod('test.php', 0666);
         echo 'octal notation: ' . substr(decoct(fileperms('test.php')), 2);
         echo '<br>';
         echo 'is readable?';
