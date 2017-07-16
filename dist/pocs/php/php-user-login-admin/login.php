@@ -15,28 +15,20 @@ if ($session->is_logged_in()) {
 if (isset($_POST['user-login'])) {
     $user_name = trim($_POST['user_name']);
     $user_password = trim($_POST['user_password']);
-   // $message = $user_name. ' '. $user_password;
-    // Check database to see if username/password exist.
-
     $found_user = User::authenticate($user_name, $user_password);
-
     if ($found_user) {
         $session->login($found_user);
-
        log_actions('<span class="login">Login</span>',"<span class='log-message'>{$found_user->user_name} {$found_user->user_lastname} </span>");
-
        redirect_to("index.php");
     } else {
-        // username/password combo was not found in the database
         $message = "Conbinación Usuario/Contraseña erronea.";
     }
-} else { // Form has not been submitted.
+} else {
     $user_name = "";
     $user_password = "";
 }
 
 If (isset($_POST['user_create'])){
-
 
 }
 ?>
@@ -57,7 +49,7 @@ If (isset($_POST['user_create'])){
                 <form class="form-login" action="login.php" method="post">
                     <header><h2>Ingresar</h2></header>
                     <div class="form-zone standard-user-login">
-                        <input class="" type="text" placeholder="nombre" name="user_name" data-parsley-maxlength="42" value="<?php echo htmlentities($user_name); ?>">
+                        <input class="" type="text" placeholder="nombre ó  correo electrónico " name="user_name" data-parsley-maxlength="42" value="<?php echo htmlentities($user_name); ?>">
                         <div class="form-password-holder">
                             <div id="lock-password-login" class="password-lock fa fa-lock" aria-hidden="true"><span>&nbsp; ver contraseña </span></div>
                             <input id="userPasswordA" class="passwordVisible" type="password" placeholder="Contraseña" name="user_password" value="<?php echo htmlentities($user_password); ?>">
@@ -85,7 +77,7 @@ If (isset($_POST['user_create'])){
             <!-- NEW ACCOUNT FORM -->
             <div id="formNewUser" class="theform">
                 <form class="form-new-user" action="" method="post">
-                    <header><h2>Nuevo Usuario</h2></header>
+                    <header><h2>Registrarse</h2></header>
                     <div class="form-zone standard-user-login">
                         <input class="form-name" type="text" placeholder="Nombre" name="user_name" required value="">
                         <input class="form-last-name" type="text" placeholder="Apellido" name="user_lastname" required value="">

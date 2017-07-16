@@ -6,7 +6,7 @@ $pagename = "PHP User Admin";
 //include_layout_element('poc_header.php');
 include_once ('../../poc_header.php');
 
-$user = User::find_by_id(16);
+$user = User::find_by_id(62);
 
 ?>
     <div class="app-holder">
@@ -25,6 +25,7 @@ $user = User::find_by_id(16);
                     <th>nick name</th>
                     <th>email</th>
                     <th>password</th>
+                    <th>initial date</th>
 
                 </tr>
                 <?php
@@ -52,6 +53,9 @@ $user = User::find_by_id(16);
                         </td>
                         <td>
                             <?php echo $user->user_password; ?>
+                        </td>
+                        <td>
+                            <?php echo $user->user_initial_date; ?>
                         </td>
                     </tr>
                     <?php

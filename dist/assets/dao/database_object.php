@@ -84,9 +84,7 @@ class DatabaseObject {
 
             return true;
         } else {
-
             return false;
-
         }
     }
 

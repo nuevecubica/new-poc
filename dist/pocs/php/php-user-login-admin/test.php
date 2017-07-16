@@ -6,30 +6,31 @@ $pagename = "PHP User Login Admin";
 include_once('../../poc_header.php');
 
 
-$user = new User();
+/*$user = new User();
 $user->user_name = "Claudio";
-$user->user_lastname = "Carnero";
-$user->user_middlename = "Dieguez";
-$user->user_nickname = "EL HOMBRE";
-$user->user_password = password_encrypt("SECRET PASSWORD");
+$user->user_lastname = "Dieguez";
+$user->user_middlename = "Carnero";
+$user->user_nickname = "Crady";
+$user->user_password = password_encrypt("cradortue");
 $user->user_email = "crady@crady.net";
 $user->user_confirm = 0;
 $user->user_initial_date = date('Y-m-d H:i:s');
-$user->save();
+$user->save();*/
 
 
-/*$user = User::find_by_id(39);
-$user->user_name = "Charlie Bananas";
-$user->user_lastname = "Venenos";
-$user->user_middlename = "Ortega";
-$user->user_nickname = "El Poisson";
-$user->user_password = "SECRET PASSWORD";
-$user->user_email = "elcharilie@veneno.com";
+/*$user = User::find_by_id(14);
+$user->user_name = "alex";
+$user->user_lastname = "Vaught";
+$user->user_middlename = "Ortiz";
+$user->user_nickname = "Alexoboy";
+$user->user_password = "SECRET";
+$user->user_email = "alex@vaught.studio";
 $user->user_initial_date = date('Y/m/d');
 $user->save();*/
 
-/*$user = User::find_by_id(56);
+/*$user = User::find_by_id(16);
 $user->delete();
 echo 'deleted user: ' . $user->user_name;*/
 
 
+?>

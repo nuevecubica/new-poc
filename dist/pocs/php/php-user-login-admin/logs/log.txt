@@ -1,5 +1,29 @@
-12/48/2017 19:48:01 | logs cleared: by user ID 
-12/03/2017 20:03:53 | <span class="login">Login</span>: <span class='log-message'>Kevin Skullmaster </span>
-12/04/2017 20:04:43 | <span class="logout">Logout</span>: <span class='log-message'>Kevin Skullmaster</span>
-14/34/2017 18:34:17 | <span class="login">Login</span>: <span class='log-message'>rapido Ramirez </span>
-14/34/2017 18:34:26 | <span class="logout">Logout</span>: <span class='log-message'>rapido Ramirez</span>
+15/39/2017 17:39:45 | logs cleared: by user ID 
+15/49/2017 17:49:13 | <span class="login">Login</span>: <span class='log-message'>alex vaught </span>
+15/49/2017 17:49:16 | <span class="logout">Logout</span>: <span class='log-message'>alex vaught</span>
+15/22/2017 18:22:13 | <span class="login">Login</span>: <span class='log-message'>alex vaught </span>
+15/22/2017 18:22:19 | <span class="logout">Logout</span>: <span class='log-message'>alex vaught</span>
+15/22/2017 18:22:27 | <span class="login">Login</span>: <span class='log-message'>Wilfredo Maravilla </span>
+15/22/2017 18:22:45 | <span class="logout">Logout</span>: <span class='log-message'>Wilfredo Maravilla</span>
+15/23/2017 18:23:08 | <span class="login">Login</span>: <span class='log-message'>Wilfredo Maravilla </span>
+15/23/2017 18:23:11 | <span class="logout">Logout</span>: <span class='log-message'>Wilfredo Maravilla</span>
+15/29/2017 18:29:22 | <span class="login">Login</span>: <span class='log-message'>alex vaught </span>
+15/29/2017 18:29:29 | <span class="logout">Logout</span>: <span class='log-message'>alex vaught</span>
+15/56/2017 18:56:36 | <span class="login">Login</span>: <span class='log-message'>alex vaught </span>
+15/56/2017 18:56:38 | <span class="logout">Logout</span>: <span class='log-message'>alex vaught</span>
+15/57/2017 18:57:00 | <span class="login">Login</span>: <span class='log-message'>alex vaught </span>
+15/57/2017 18:57:02 | <span class="logout">Logout</span>: <span class='log-message'>alex vaught</span>
+15/57/2017 18:57:27 | <span class="login">Login</span>: <span class='log-message'>alex vaught </span>
+15/57/2017 18:57:29 | <span class="logout">Logout</span>: <span class='log-message'>alex vaught</span>
+15/23/2017 19:23:32 | <span class="login">Login</span>: <span class='log-message'>Claudio Dieguez </span>
+15/23/2017 19:23:34 | <span class="logout">Logout</span>: <span class='log-message'>Claudio Dieguez</span>
+15/25/2017 19:25:28 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
+15/26/2017 19:26:41 | <span class="logout">Logout</span>: <span class='log-message'>Alex Vaught</span>
+15/27/2017 19:27:02 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
+15/34/2017 19:34:15 | <span class="logout">Logout</span>: <span class='log-message'>Alex Vaught</span>
+15/35/2017 19:35:23 | <span class="login">Login</span>: <span class='log-message'>Claudio Dieguez </span>
+15/35/2017 19:35:55 | <span class="logout">Logout</span>: <span class='log-message'>Claudio Dieguez</span>
+15/36/2017 19:36:42 | <span class="login">Login</span>: <span class='log-message'>Claudio Dieguez </span>
+15/37/2017 19:37:28 | <span class="logout">Logout</span>: <span class='log-message'>Claudio Dieguez</span>
+15/04/2017 20:04:29 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
+15/04/2017 20:04:32 | <span class="logout">Logout</span>: <span class='log-message'>Alex Vaught</span>
