@@ -1,5 +1,13 @@
 <?php
-
+/**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *
+ * Coder : ALEX VAUGHT
+ * Copyright : nuevecubica 2017
+ * Type : PHP CLASS
+ * Decription : SESSIONS
+ *
+ *
+ * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 class Session {
 
     private $logged_in = false;

@@ -27,3 +27,5 @@
 15/37/2017 19:37:28 | <span class="logout">Logout</span>: <span class='log-message'>Claudio Dieguez</span>
 15/04/2017 20:04:29 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
 15/04/2017 20:04:32 | <span class="logout">Logout</span>: <span class='log-message'>Alex Vaught</span>
+16/07/2017 22:07:15 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
+16/53/2017 22:53:49 | <span class="logout">Logout</span>: <span class='log-message'>Alex Vaught</span>

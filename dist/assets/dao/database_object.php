@@ -1,4 +1,13 @@
 <?php
+/**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *
+ * Coder : ALEX VAUGHT
+ * Copyright : nuevecubica 2017
+ * Type : PHP CLASS
+ * Decription : DATABASE OBJECTS
+ *
+ *
+ * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 require_once(SITE_DAO . 'mysqldatabase.php');
 
 class DatabaseObject {
@@ -73,12 +82,13 @@ class DatabaseObject {
 
         $attributes = $this->sanitized_attributes();
         array_shift($attributes);
+
         $sql = "INSERT INTO " . static::$table_name . " (";
         $sql .= join(", ", array_keys($attributes));
         $sql .= ") VALUES ('";
         $sql .= join("', '", array_values($attributes));
         $sql .= "')";
-        echo $sql;
+       // echo $sql;
         if ($db->query($sql)) {
             $this->user_id = $db->inserted_id();
 

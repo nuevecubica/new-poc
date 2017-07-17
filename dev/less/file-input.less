@@ -1,0 +1,84 @@
+.box-input{
+  @color_1: #f1e5e6;
+  @background_color_1: #d3394c;
+  @background_color_2: #722040;
+
+
+
+
+  .js {
+    .inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  .inputfile {
+    &+label {
+      max-width: 80%;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      display: inline-block;
+      overflow: hidden;
+      padding: 0.625rem 1.25rem;
+      svg {
+        width: 1em;
+        height: 1em;
+        vertical-align: middle;
+        fill: currentColor;
+        margin-top: -0.25em;
+        margin-right: 0.25em;
+      }
+    }
+    &:focus {
+      &+label {
+        outline: 1px dotted #000;
+        outline: -webkit-focus-ring-color auto 5px;
+      }
+    }
+  }
+  .no-js {
+    .inputfile {
+      &+label {
+        display: none;
+      }
+    }
+  }
+  .inputfile.has-focus {
+    &+label {
+      outline: 1px dotted #000;
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+  }
+
+
+  .inputfile-1 {
+    &+label {
+      color: @color_1;
+      background-color: @background_color_1;
+      &:hover {
+        background-color: @background_color_2;
+      }
+    }
+    &:focus {
+      &+label {
+        background-color: @background_color_2;
+      }
+    }
+  }
+  .inputfile-1.has-focus {
+    &+label {
+      background-color: @background_color_2;
+    }
+  }
+}
+
+#inputFile{
+  display: none;
+}

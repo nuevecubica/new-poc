@@ -21,7 +21,7 @@ If (!$session->is_logged_in()) {
         <div class="spacer"></div>
         <p>Welcome</p>
         <h2><?php echo 'User: '.  $logged_user['user_name'].' '.$logged_user['user_lastname']; ?></h2>
-
+        <button class="btn btn-primary"><a href="upload">upload a file</a></button>
     </article>
 </div>
 <?php

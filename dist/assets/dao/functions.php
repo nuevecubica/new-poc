@@ -1,4 +1,13 @@
 <?php
+/**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *
+ * Coder : ALEX VAUGHT
+ * Copyright : nuevecubica 2017
+ * Type : PHP FUNCTIONS
+ * Decription : Help functions
+ *
+ *
+ * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 function strip_zeros_from_date($marked_string = "") {
     // first remove the marked zeros
@@ -59,11 +68,6 @@ function errors() {
     }
 }
 
-/******
- * ENCRYPT PASSWORD
- * @param $password
- * @return string
- */
 function password_encrypt($password) {
     $hash_format = "$2y$10$";   // Tells PHP to use Blowfish with a "cost" of 10
     $salt_length = 22;                    // Blowfish salts should be 22-characters or more
@@ -74,11 +78,6 @@ function password_encrypt($password) {
 
 }
 
-/******
- * GENERATE SATL
- * @param $length
- * @return bool|string
- */
 function generate_salt($length) {
     // Not 100% unique, not 100% random, but good enough for a salt
     // MD5 returns 32 characters
@@ -96,11 +95,6 @@ function generate_salt($length) {
     return $salt;
 }
 
-/*******
- * @param $password
- * @param $existing_hash
- * @return bool
- */
 function password_check($password, $existing_hash) {
     // existing hash contains format and salt at start
     $hash = crypt($password, $existing_hash);
@@ -111,17 +105,10 @@ function password_check($password, $existing_hash) {
     }
 }
 
-/*******
- * @param $element
- */
 function include_layout_element($element) {
     include_once(SITE_ELEMENTS . $element);
 }
 
-/*******
- * @param $action
- * @param string $message
- */
 function log_actions($action, $message_log = "") {
 
     $logfile = SITE_ROOT . 'logs' . DS . 'log.txt';

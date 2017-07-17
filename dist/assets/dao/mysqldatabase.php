@@ -1,4 +1,13 @@
 <?php
+/**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *
+ * Coder : ALEX VAUGHT
+ * Copyright : nuevecubica 2017
+ * Type : PHP CLASS
+ * Decription : CONECTION HELPLERS
+ *
+ *
+ * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 require_once(SITE_DAO.'connect.php');
 
 class MySQLDataBase

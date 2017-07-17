@@ -1,4 +1,14 @@
 <?php
+/**+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *
+ * Coder : ALEX VAUGHT
+ * Copyright : nuevecubica 2017
+ * Type : PHP
+ * Decription : INITIALIZE APP
+ *
+ *
+ * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
 error_reporting(E_ERROR | E_PARSE);
 ini_set('display_errors', 1);
 
@@ -8,7 +18,9 @@ defined('SITE_ELEMENTS') ? null : define('SITE_ELEMENTS', $_SERVER["DOCUMENT_ROO
 defined('SITE_ROOT') ? null : define('SITE_ROOT', $_SERVER["DOCUMENT_ROOT"].'pocs'.DS.'php'.DS.'php-user-login-admin'.DS);
 
 
-
+/************************************
+ * LOADS
+*************************************/
 // CONFIG FILE
 require_once(SITE_DAO.'connect.php');
 // FUNCTIONS
@@ -19,3 +31,7 @@ require_once(SITE_DAO.'mysqldatabase.php');
 require_once(SITE_DAO.'database_object.php');
 // USERS
 require_once(SITE_DAO.'user.php');
+// IMAGES
+require_once(SITE_DAO.'images.php');
+
+

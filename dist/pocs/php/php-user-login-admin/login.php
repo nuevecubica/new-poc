@@ -31,6 +31,7 @@ if (isset($_POST['user-login'])) {
 If (isset($_POST['user_create'])){
 
 }
+
 ?>
     <div class="app-holder">
         <article>
@@ -55,7 +56,7 @@ If (isset($_POST['user_create'])){
                             <input id="userPasswordA" class="passwordVisible" type="password" placeholder="Contraseña" name="user_password" value="<?php echo htmlentities($user_password); ?>">
                         </div>
 
-                        <button class="btn btn-green" type="submit" name="user-login">Enviar</button>
+                        <button class="btn btn-primary" type="submit" name="user-login">Enviar</button>
                     </div>
                     <!--<div class="form-zone form-zone-fb">
                         <p>Ingresa con tu cuenta de Facebook</p>
@@ -68,7 +69,7 @@ If (isset($_POST['user_create'])){
                 </div>
                 <div class="form-zone form-zone-new-account">
                     <p>¿No tienes cuenta?</p>
-                    <button id="newAccountButton" class="btn btn-log-org-blue" type="button">Crear Nueva Cuenta</button>
+                    <button id="newAccountButton" class="btn btn-warning" type="button">Crear Nueva Cuenta</button>
                 </div>
                 <div class="form-zone pass-reminder">
                     <span>No recuerdo mi contraseña</span>
@@ -87,12 +88,12 @@ If (isset($_POST['user_create'])){
                             <div id="lock-password-newuser" class="password-lock fa fa-lock" aria-hidden="true"><span>&nbsp;ver password&nbsp;</span></div>
                             <input id="userPasswordB" class="form-password" type="password" placeholder="Contraseña" name="user_password" required value="">
                         </div>
-                        <button class="form-login-btn-send btn btn-green" type="submit" name="user_create">Enviar</button>
-                        <button class="reset btn btn-blue" type="reset">Limpiar</button>
+                        <button class="form-login-btn-send btn btn-primary" type="submit" name="user_create">Enviar</button>
+                        <button class="reset btn btn-danger" type="reset">Limpiar</button>
                     </div>
                     <div class="form-zone form-zone-got-account">
                         <p>¿ya tienes cuenta?</p>
-                        <button id="toLoginForm" class="btn btn-log-org-blue" type="button">Tengo una Cuenta</button>
+                        <button id="toLoginForm" class="btn btn-warning" type="button">Tengo una Cuenta</button>
                     </div>
                 </form>
             </div>
