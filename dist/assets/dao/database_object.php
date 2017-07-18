@@ -15,11 +15,11 @@ class DatabaseObject {
 // COMOMN DATABASE  METHODS
 
     public static function find_all() {
-        return static::find_by_sql("SELECT * from users");
+        return static::find_by_sql("SELECT * from ".static::$table_name);
     }
 
     public static function find_by_id($id = 0) {
-        $result_array = static::find_by_sql("SELECT * FROM users WHERE user_id={$id} LIMIT 1");
+        $result_array = static::find_by_sql("SELECT * FROM ".static::$table_name." WHERE user_id={$id} LIMIT 1");
         return !empty($result_array) ? array_shift($result_array) : false;
     }
 

@@ -35,9 +35,6 @@ If (isset($_POST['user_create'])){
 ?>
     <div class="app-holder">
         <article>
-            <button class="btn right "><a href="admin.php"><i class="fa fa-arrow-circle-o-right"></i> Go to Admin</a></button>
-            <button class="btn right "><a href="logfile.php"><i class="fa fa-arrow-circle-o-right"></i> log file</a></button>
-
            <!-- <button class="btn back-tut "><a href="index.php"><i class="fa fa-arrow-circle-o-left"></i> Go back to Tutorial</a></button>-->
             <div class="spacer"></div>
             <h2>Login Form</h2>

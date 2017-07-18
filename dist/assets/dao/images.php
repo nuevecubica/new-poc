@@ -39,7 +39,6 @@ class Image extends DatabaseObject {
 
     public function attach_file($file) {
 
-
         if (!$file || empty($file) || !is_array($file)) {
             $this->errors[] = "No file was uploaded";
             return false;
@@ -93,6 +92,21 @@ class Image extends DatabaseObject {
                 $this->errors[] = "ERROR - file upload -";
                 return false;
             }
+        }
+    }
+
+    public function image_path() {
+        return 'http://newpoc.dev/pocs/php/php-user-login-admin/' . $this->upload_dir.DS.$this->image_filename;
+    }
+    public function size_as_text(){
+        if($this->image_size < 1024){
+            return "{$this->image_size} bytes";
+        }elseif($this->image_size < 1048576){
+            $size_kb = round($this->image_size/1024);
+            return "{$size_kb} KB";
+        }else{
+            $size_mb =  round($this->image_size,1);
+            return "{$size_mb} MB";
         }
     }
 

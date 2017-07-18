@@ -10,36 +10,15 @@ If (!$session->is_logged_in()) {
 }else{
     $logged_user = get_object_vars(User::find_by_id($_SESSION['user_id']));
 }
-// USER
-/*$user = new User();
-$user->user_name = "Claudio";
-$user->user_lastname = "Dieguez";
-$user->user_middlename = "Carnero";
-$user->user_nickname = "Crady";
-$user->user_password = password_encrypt("cradortue");
-$user->user_email = "crady@crady.net";
-$user->user_confirm = 0;
-$user->user_initial_date = date('Y-m-d H:i:s');
-$user->save();*/
 
-
-/*$user = User::find_by_id(14);
-$user->user_name = "alex";
-$user->user_lastname = "Vaught";
-$user->user_middlename = "Ortiz";
-$user->user_nickname = "Alexoboy";
-$user->user_password = "SECRET";
-$user->user_email = "alex@vaught.studio";
-$user->user_initial_date = date('Y/m/d');
-$user->save();*/
-
-/*$user = User::find_by_id(16);
-$user->delete();
-echo 'deleted user: ' . $user->user_name;*/
 
 $max_file_size = 1048576;
 // 1048576 = 1MB
 // 10485760 = 10MB
+// 20971520 = 20MB
+// 26214400 = 25MB
+// 52428800 = 50MB
+
 
 $message = "";
 
@@ -49,15 +28,11 @@ if (isset($_POST['user-upload-file'])) {
     $image->image_caption = $_POST['caption'];
     $image->attach_file($_FILES['file_upload']);
 
-
-
    if($image->save()){
-         // success
          $message = "La imagen se ha subido correctamente";
      }else{
          $message = join("<br/>",$image->errors);
      }
-
 }
 ?>
     <div class="app-holder">

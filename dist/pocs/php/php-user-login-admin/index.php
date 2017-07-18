@@ -17,11 +17,13 @@ If (!$session->is_logged_in()) {
 <div class="app-holder">
     <article>
         <button class="btn back"><a href="logout.php">logout</a></button>
-        <button class="btn right "><a href="login.php"><i class="fa fa-arrow-circle-o-right"></i> go to demo</a></button>
         <div class="spacer"></div>
         <p>Welcome</p>
         <h2><?php echo 'User: '.  $logged_user['user_name'].' '.$logged_user['user_lastname']; ?></h2>
-        <button class="btn btn-primary"><a href="upload">upload a file</a></button>
+        <button class="btn  btn-primary"><a href="upload">upload a file</a></button>
+        <button class="btn  btn-primary"><a href="admin.php"><i class="fa fa-arrow-circle-o-right"></i> Go to Admin</a></button>
+        <button class="btn  btn-primary"><a href="logfile.php"><i class="fa fa-arrow-circle-o-right"></i> log file</a></button>
+        <button class="btn  btn-primary"><a href="gallery.php"><i class="fa fa-arrow-circle-o-right"></i> Gallery</a></button>
     </article>
 </div>
 <?php
