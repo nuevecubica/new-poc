@@ -9,7 +9,7 @@ include_once ('../../poc_header.php');
 If (!$session->is_logged_in()) {
     redirect_to("login.php");
 }else{
-    $logged_user = get_object_vars(User::find_by_id($_SESSION['user_id']));
+    $logged_user = get_object_vars(User::find_by_id($_SESSION['id']));
 }
 
 
@@ -24,6 +24,10 @@ If (!$session->is_logged_in()) {
         <button class="btn  btn-primary"><a href="admin.php"><i class="fa fa-arrow-circle-o-right"></i> Go to Admin</a></button>
         <button class="btn  btn-primary"><a href="logfile.php"><i class="fa fa-arrow-circle-o-right"></i> log file</a></button>
         <button class="btn  btn-primary"><a href="gallery.php"><i class="fa fa-arrow-circle-o-right"></i> Gallery</a></button>
+        <button class="btn  btn-primary"><a href="admin_images.php"><i class="fa fa-arrow-circle-o-right"></i> Admin Gallery</a></button>
+        <div class="spacer"></div>
+        <p class="message"><?php echo output_message($message); ?></p>
+        <div class="spacer"></div>
     </article>
 </div>
 <?php

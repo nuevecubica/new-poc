@@ -19,7 +19,9 @@ if ($_GET['clear'] == 'true') {
     <div class="app-holder">
         <article>
             <button class="btn right "><a href="index.php"><i class="fa fa-arrow-circle-o-right"></i> index</a></button>
-            <button class="btn back-tut "><a href="logfile.php?clear=true"><i class="fa fa-arrow-circle-o-down"></i> clear log file</a></button>
+            <button class="btn back-tut "><a href="login.php"><i class="fa fa-arrow-circle-o-left"></i> Go back to login</a></button>
+            <div class="spacer"></div>
+            <button class="btn red "><a href="logfile.php?clear=true"><i class="fa fa-arrow-circle-o-down"></i> clear log file</a></button>
             <div class="spacer"></div>
             <h2>Log File</h2>
             <?php

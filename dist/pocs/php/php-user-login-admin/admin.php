@@ -34,7 +34,7 @@ $user = User::find_by_id(62);
                     ?>
                     <tr>
                         <td>
-                            <?php echo $user->user_id; ?>
+                            <?php echo $user->id; ?>
                         </td>
                         <td>
                             <?php echo $user->user_name; ?>

@@ -14,9 +14,9 @@ require_once(SITE_DAO . 'mysqldatabase.php');
 class User extends DatabaseObject {
 
     protected static $table_name = "users";
-    protected static $db_fields = array("user_id", 'user_name', 'user_lastname', 'user_middlename', 'user_nickname', 'user_fb_id', 'user_email', 'user_password', 'user_avatar', 'user_confirm', 'user_initial_date');
+    protected static $db_fields = array("id", 'user_name', 'user_lastname', 'user_middlename', 'user_nickname', 'user_fb_id', 'user_email', 'user_password', 'user_avatar', 'user_confirm', 'user_initial_date');
 
-    public $user_id;
+    public $id;
     public $user_name;
     public $user_lastname;
     public $user_middlename;

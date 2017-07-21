@@ -10,6 +10,11 @@ button {
   a {
     color: white;
   }
+  &:hover{
+    a{
+      color: @white
+    }
+  }
   &.right {
     float: right;
     background-color: @orange;
@@ -27,9 +32,20 @@ button {
       color: @white;
     }
   }
-  &:hover {
-    a {
+  &.red{
+    background-color: @red;
+    color: white;
+    &:hover {
+      background-color: @dark-red;
       color: white;
+    }
+  }
+  &.green{
+    background-color: @green;
+    color: white;
+    &:hover {
+      background-color: @dark-green;
+      color: @white;
     }
   }
   &.back {

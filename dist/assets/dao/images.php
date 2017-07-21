@@ -14,9 +14,9 @@ require_once(SITE_DAO . 'mysqldatabase.php');
 class Image extends DatabaseObject {
 
     protected static $table_name = "images";
-    protected static $db_fields = array("image_id", "image_filename", "image_type", "image_size", "image_caption");
+    protected static $db_fields = array("id", "image_filename", "image_type", "image_size", "image_caption");
 
-    public $image_id;
+    public $id;
     public $image_filename;
     public $image_type;
     public $image_size;
@@ -60,7 +60,7 @@ class Image extends DatabaseObject {
 
     public function save() {
 
-        if (isset($this->image_id)) {
+        if (isset($this->id)) {
             $this->$this->update();
 
         } else {
@@ -96,8 +96,9 @@ class Image extends DatabaseObject {
     }
 
     public function image_path() {
-        return 'http://newpoc.dev/pocs/php/php-user-login-admin/' . $this->upload_dir.DS.$this->image_filename;
+        return $this->upload_dir.DS.$this->image_filename;
     }
+
     public function size_as_text(){
         if($this->image_size < 1024){
             return "{$this->image_size} bytes";

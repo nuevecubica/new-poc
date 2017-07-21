@@ -7,7 +7,7 @@ include_once('../../poc_header.php');
 
 If (!$session->is_logged_in()) {
     redirect_to("login.php");
-}else{
+} else {
     $logged_user = get_object_vars(User::find_by_id($_SESSION['user_id']));
 }
 
@@ -19,26 +19,25 @@ $max_file_size = 1048576;
 // 26214400 = 25MB
 // 52428800 = 50MB
 
-
-$message = "";
-
 if (isset($_POST['user-upload-file'])) {
-
     $image = new Image();
     $image->image_caption = $_POST['caption'];
     $image->attach_file($_FILES['file_upload']);
 
-   if($image->save()){
-         $message = "La imagen se ha subido correctamente";
-     }else{
-         $message = join("<br/>",$image->errors);
-     }
+    if ($image->save()) {
+        $session->message("La imagen se ha subido correctamente");
+        redirect_to('admin_images.php');
+    } else {
+        $message = join("<br/>", $image->errors);
+    }
 }
 ?>
     <div class="app-holder">
         <article>
+            <button class="btn back-tut "><a href="login.php"><i class="fa fa-arrow-circle-o-left"></i> Go back to login</a></button>
+            <div class="spacer"></div>
             <p>Welcome</p>
-            <h2><?php echo 'User: '.  $logged_user['user_name'].' '.$logged_user['user_lastname']; ?></h2>
+            <h2><?php echo 'User: ' . $logged_user['user_name'] . ' ' . $logged_user['user_lastname']; ?></h2>
             <div id="formUpload" class="theform">
                 <form class="form-login" action="upload.php" enctype="multipart/form-data" method="POST">
                     <header><h2>Image Upload</h2></header>

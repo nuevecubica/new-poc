@@ -15,11 +15,12 @@ class DatabaseObject {
 // COMOMN DATABASE  METHODS
 
     public static function find_all() {
-        return static::find_by_sql("SELECT * from ".static::$table_name);
+        return static::find_by_sql("SELECT * from " . static::$table_name);
     }
 
     public static function find_by_id($id = 0) {
-        $result_array = static::find_by_sql("SELECT * FROM ".static::$table_name." WHERE user_id={$id} LIMIT 1");
+        global $db;
+        $result_array = static::find_by_sql("SELECT * FROM " . static::$table_name . " WHERE id= " . $db->escape_value($id) . " LIMIT 1");
         return !empty($result_array) ? array_shift($result_array) : false;
     }
 
@@ -74,7 +75,7 @@ class DatabaseObject {
     }
 
     public function save() {
-        return isset($this->user_id) ? $this->update() : $this->create();
+        return isset($this->id) ? $this->update() : $this->create();
     }
 
     protected function create() {
@@ -88,9 +89,9 @@ class DatabaseObject {
         $sql .= ") VALUES ('";
         $sql .= join("', '", array_values($attributes));
         $sql .= "')";
-       // echo $sql;
+        // echo $sql;
         if ($db->query($sql)) {
-            $this->user_id = $db->inserted_id();
+            $this->id = $db->inserted_id();
 
             return true;
         } else {
@@ -110,8 +111,7 @@ class DatabaseObject {
 
         $sql = "UPDATE " . static::$table_name . " SET ";
         $sql .= join(", ", $attribute_pairs);
-        $sql .= " WHERE user_id=" . $db->escape_value($this->user_id);
-
+        $sql .= " WHERE id = " . $db->escape_value($this->id);
 
 
         $db->query($sql);
@@ -122,12 +122,20 @@ class DatabaseObject {
     public function delete() {
         global $db;
         $sql = "DELETE FROM  " . static::$table_name;
-        $sql .= " WHERE user_id = " . $db->escape_value($this->user_id);
+        $sql .= " WHERE id = " . $db->escape_value($this->id);
         $sql .= " LIMIT 1";
-
         $db->query($sql);
 
         return ($db->affected_rows() == 1) ? true : false;
     }
 
-}
+    public function destroy() {
+        if ($this->delete()) {
+            $target_path = SITE_ROOT.$this->image_path();
+            return unlink($target_path) ? true : false;
+        } else {
+            return false;
+        }
+    }
+
+}// END CLASS

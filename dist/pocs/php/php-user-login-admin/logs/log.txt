@@ -1,3 +1,1 @@
-17/22/2017 21:22:18 | logs cleared: by user ID 62 (Alex Vaught )
-17/22/2017 21:22:28 | <span class="logout">Logout</span>: <span class='log-message'>Alex Vaught</span>
-17/22/2017 21:22:55 | <span class="login">Login</span>: <span class='log-message'>Claudio Dieguez </span>
+20/33/2017 20:33:25 | logs cleared: by user ID 62 (Alex Vaught )
