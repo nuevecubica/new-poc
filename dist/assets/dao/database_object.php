@@ -83,7 +83,6 @@ class DatabaseObject {
 
         $attributes = $this->sanitized_attributes();
         array_shift($attributes);
-
         $sql = "INSERT INTO " . static::$table_name . " (";
         $sql .= join(", ", array_keys($attributes));
         $sql .= ") VALUES ('";
@@ -92,7 +91,6 @@ class DatabaseObject {
         // echo $sql;
         if ($db->query($sql)) {
             $this->id = $db->inserted_id();
-
             return true;
         } else {
             return false;

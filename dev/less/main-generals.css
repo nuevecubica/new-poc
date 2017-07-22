@@ -250,6 +250,15 @@ input[type=password] {
   font-size: 16px;
   color: #666666;
 }
+textarea {
+  font-size: 16px;
+  color: #666666;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 6px;
+  resize: none;
+}
 .theform {
   max-width: 400px;
   margin: 0 auto;
@@ -383,6 +392,13 @@ table td {
 table tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.2);
 }
+table.comment {
+  width: 80%;
+  margin: 0 auto;
+}
+table.comment tr:nth-child(odd) {
+  background-color: transparent;
+}
 .log-entries {
   list-style: none;
 }
@@ -411,6 +427,25 @@ table tr:nth-child(odd) {
   border-radius: 6px;
 }
 .image-holder p {
+  margin-top: 4px;
+  text-align: center;
+}
+.image-row-single {
+  padding: 30px 20px;
+}
+.image-holder-single {
+  max-width: 780px;
+  background-color: #353535;
+  padding: 0px;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.2), 0 0 0 10px rgba(222, 226, 211, 0.8);
+}
+.image-holder-single img {
+  width: 100%;
+  border-radius: 6px;
+}
+.image-holder-single p {
   margin-top: 4px;
   text-align: center;
 }

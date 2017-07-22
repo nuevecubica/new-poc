@@ -29,6 +29,7 @@ require_once(SITE_DAO.'functions.php');
 require_once(SITE_DAO.'session.php');
 require_once(SITE_DAO.'mysqldatabase.php');
 require_once(SITE_DAO.'database_object.php');
+require_once(SITE_DAO.'comments.php');
 // USERS
 require_once(SITE_DAO.'user.php');
 // IMAGES

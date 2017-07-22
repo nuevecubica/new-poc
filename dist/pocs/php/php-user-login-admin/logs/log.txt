@@ -1,1 +1,6 @@
 20/33/2017 20:33:25 | logs cleared: by user ID 62 (Alex Vaught )
+21/15/2017 21:15:34 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
+21/10/2017 23:10:04 | <span class="logout">Logout</span>: <span class='log-message'>Alex Vaught</span>
+21/12/2017 23:12:47 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
+21/27/2017 23:27:16 | <span class="logout">Logout</span>: <span class='log-message'>Alex Vaught</span>
+21/55/2017 23:55:24 | <span class="login">Login</span>: <span class='log-message'>Juan Herrera </span>

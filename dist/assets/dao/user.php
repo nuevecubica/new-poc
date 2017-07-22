@@ -7,7 +7,7 @@
  * Decription : USER class extends DatabaseObject
  *
  *
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+ * +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 require_once(SITE_DAO . 'mysqldatabase.php');
 
@@ -58,6 +58,10 @@ class User extends DatabaseObject {
             }
         }
     }
+
+
+
+
 
 
 }// DatabaseObject

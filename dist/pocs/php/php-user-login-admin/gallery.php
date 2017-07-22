@@ -8,7 +8,7 @@ include_once('../../poc_header.php');
 If (!$session->is_logged_in()) {
     redirect_to("login.php");
 } else {
-    $logged_user = get_object_vars(User::find_by_id($_SESSION['user_id']));
+    $logged_user = get_object_vars(User::find_by_id($_SESSION['id']));
 }
 
 $images = Image::find_all();
@@ -25,8 +25,8 @@ $images = Image::find_all();
             <div class="row">
                 <?php foreach ($images as $image) { ?>
                     <div class="image-holder col-md-4">
-                        <img class="thumbImage" src="<?php echo $image->image_path(); ?>" alt="<?php echo $image->image_caption?>">
-                        <p><?php echo $image->image_caption?></p>
+                        <a href="image-single.php?id=<?php echo $image->id; ?>"><img class="thumbImage" src="<?php echo $image->image_path(); ?>" alt="<?php echo $image->image_caption ?>"></a>
+                        <p><?php echo $image->image_caption ?></p>
                     </div>
 
 
@@ -48,14 +48,10 @@ $images = Image::find_all();
                     <div class="carousel-inner">
                         <img id="bigimage" src="images/" alt="" width="100%" height="235px"/>
                     </div>
-
-                   <!-- <a class="carousel-control left" href="#modaCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-                    <a class="carousel-control right" href="#modalCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>-->
-
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-default" data-dismiss="modal">Close</button>
+                <!-- <button class="btn btn-default" data-dismiss="modal">Close</button>-->
             </div>
         </div>
     </div>
@@ -66,22 +62,16 @@ include_once('../../poc_footer.php');
 ?>
 
 <script>
-
+    /*
     $('.thumbImage').css({
-        cursor:'pointer',
+        cursor: 'pointer',
     });
-
-$('.thumbImage').click(function(event){
-    event.preventDefault();
-    var theImageName = $(this).attr('src');
-    console.log('this is the name: '+theImageName);
-
-
-    $('#bigimage').attr('src',theImageName);
-
-    $('#myModal').modal('show');
-
-});
-
-
+    $('.thumbImage').click(function (event) {
+        event.preventDefault();
+        var theImageName = $(this).attr('src');
+        console.log('this is the name: ' + theImageName);
+        $('#bigimage').attr('src', theImageName);
+        $('#myModal').modal('show');
+    });
+    */
 </script>
