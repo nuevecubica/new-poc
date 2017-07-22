@@ -1,6 +1,6 @@
 # New POC
 
-Proof of content <b>BOILERPLATES JS CSS LESS HTML5</b> and more...
+Proof of content <b>JS CSS LESS HTML5 PHP</b> and more...
 
 by alex vaught
 
