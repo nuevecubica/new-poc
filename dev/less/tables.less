@@ -16,16 +16,58 @@ table {
       background-color: @black-20;
     }
   }
-  &.comment{
+  &.comment {
     width: 80%;
     margin: 0 auto;
-    th{
+    th {
 
     }
-    tr{
-      &:nth-child(odd){
+    tr {
+      &:nth-child(odd) {
         background-color: transparent;
       }
+    }
+  }
+  &.table-comments {
+    @media screen and(max-width: 480px) {
+      width: 300px;
+      th {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+
+      td {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+  &.table-image {
+    th {
+      text-align: center;
+    }
+    td {
+
+      &:nth-child(6) {
+        text-align: center;
+      }
+    }
+    a {
+      color: white;
     }
   }
 }

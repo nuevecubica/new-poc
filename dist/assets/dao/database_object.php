@@ -12,7 +12,15 @@ require_once(SITE_DAO . 'mysqldatabase.php');
 
 class DatabaseObject {
 
-// COMOMN DATABASE  METHODS
+// COMMON DATABASE  METHODS
+
+    public static function count_all() {
+    global $db;
+    $sql = "SELECT COUNT(*) FROM ".static::$table_name;
+    $result_set = $db->query($sql);
+    $row = $db->fetch_array($result_set);
+    return array_shift($row);
+}
 
     public static function find_all() {
         return static::find_by_sql("SELECT * from " . static::$table_name);
@@ -129,7 +137,7 @@ class DatabaseObject {
 
     public function destroy() {
         if ($this->delete()) {
-            $target_path = SITE_ROOT.$this->image_path();
+            $target_path = SITE_ROOT . $this->image_path();
             return unlink($target_path) ? true : false;
         } else {
             return false;

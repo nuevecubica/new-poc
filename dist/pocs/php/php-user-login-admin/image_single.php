@@ -28,9 +28,9 @@ if (isset($_POST['send-comment'])) {
     $new_comment = Comment::make($image->id, $author, $body);
     var_dump($new_comment);
 
-    if($new_comment && $new_comment->save()){
-
-    }else{
+    if ($new_comment && $new_comment->save()) {
+        redirect_to("image_single.php?id={$image->id}");
+    } else {
         // create error list
         $message = "There was an error that prevented the comment from being save";
     }
@@ -38,6 +38,8 @@ if (isset($_POST['send-comment'])) {
     $author = "";
     $body = "";
 }
+
+$comments = $image->comments();
 ?>
 <?php include_once('../../poc_header.php'); ?>
 
@@ -54,11 +56,30 @@ if (isset($_POST['send-comment'])) {
         </div>
         <div class="comments-holder">
             <!-- comments -->
+
+            <?php
+            foreach ($comments as $comment) {
+                ?>
+                <div class="comment-holder">
+                    <ul>
+                        <li><?php echo htmlentities($comment->author); ?></li>
+                        <li><?php echo strip_tags($comment->body); ?></li>
+                        <li><?php echo datetime_to_text($comment->created); ?></li>
+                    </ul>
+
+                </div>
+                <?php
+            }
+            if (empty($comments)) {
+                echo "<div class='comment-holder'>No Comments</div>";
+            }
+            ?>
+
         </div>
         <div class="comments-form-holder">
             <p><?php echo output_message($message); ?></p>
             <div class="spacer"></div>
-            <form action="image-single.php?id=<?php echo $image->id; ?>" method="post">
+            <form action="image_single.php?id=<?php echo $image->id; ?>" method="post">
                 <table class="comment">
                     <tr>
                         <td>

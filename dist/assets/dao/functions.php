@@ -116,7 +116,7 @@ function log_actions($action, $message_log = "") {
     $new = file_exists($logfile) ? true : false;
 
 
-  if ($handle = fopen($logfile, 'a')) {
+    if ($handle = fopen($logfile, 'a')) {
 
         $timestamp = strftime("%d/%M/%Y %H:%M:%S", time());
         $content = "{$timestamp} | {$action}: {$message_log}\n";
@@ -130,6 +130,12 @@ function log_actions($action, $message_log = "") {
             echo "No se puede abrir archivo.";
         }
     }
+}
+
+function datetime_to_text($datetime = "") {
+    setlocale(LC_ALL,"es_ES");
+    $unixdatetime = strtotime($datetime);
+    return strftime("%d de %B %Y - %I:%M %p", $unixdatetime);
 }
 
 ?>

@@ -111,4 +111,9 @@ class Image extends DatabaseObject {
         }
     }
 
+    public function comments(){
+        return Comment::find_comments_on($this->id);
+    }
+
+
 }

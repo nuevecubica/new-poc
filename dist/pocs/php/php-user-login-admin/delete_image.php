@@ -9,7 +9,7 @@ If (!$session->is_logged_in()) {
 
 if(empty($_GET['id'])){
     $session->message("No Image ID was provided");
-    redirect_to('index');
+    redirect_to('admin_images.php');
 }
 
 $image = Image::find_by_id($_GET['id']);
@@ -18,7 +18,7 @@ if($image && $image->destroy()){
     redirect_to('admin_images.php');
 }else{
     $session->message("The image could not be deleted");
-    redirect_to('index.php');
+    redirect_to('admin_images.php');
 }
 
 If(isset($database)){
