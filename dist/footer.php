@@ -8,6 +8,7 @@
             <div class="color-code js"> <i class="fa fa-file-text" aria-hidden="true"></i> JS</div>
             <div class="color-code php "><i class="fa fa-file-text" aria-hidden="true"></i> PHP</div>
             <div class="color-code mysql"><i class="fa fa-file-text" aria-hidden="true"></i> MYSQL</div>
+            <div class="color-code no-sql"><i class="fa fa-file-text" aria-hidden="true"></i> NoSQL</div>
         </span>
         <div class="spacer"></div>
         <hr>

@@ -1,0 +1,53 @@
+.sequence-block {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin: 25px 0;
+  .bullet-block {
+    display: table-cell;
+    padding-right: 10px;
+    width: 2.5em;
+    .sequence-step {
+      text-align: center;
+      background-color: @orange;
+      color: #fff;
+      width: 24px;
+      font-weight: 700;
+      height: 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      line-height: 24px;
+      &:before {
+        box-sizing: border-box;
+      }
+    }
+  }
+  .sequence-section {
+    h4 {
+
+    }
+    p {
+
+    }
+    .highlight-sh {
+      border-radius: 5px;
+      overflow: hidden;
+      .highlight {
+        .pre-sequence-block {
+          width: 100%;
+          border-radius: 0;
+          border: none;
+          border-left: 5px solid @white-60 !important;
+          font-size: 16px;
+          line-height: 24px;
+          overflow: auto;
+          word-wrap: normal;
+          white-space: pre;
+          background-color: @white-60;
+          color: @black;
+
+        }
+      }
+    }
+  }
+}

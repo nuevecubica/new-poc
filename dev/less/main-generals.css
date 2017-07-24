@@ -96,6 +96,12 @@ button.js {
 button.js:hover {
   background-color: #75a9f9;
 }
+button.mongo {
+  background-color: #5c90e0;
+}
+button.mongo:hover {
+  background-color: #75a9f9;
+}
 .color-code {
   padding: 10px;
   display: inline-block;
@@ -120,6 +126,9 @@ button.js:hover {
 }
 .color-code.mysql {
   background-color: #b36ff4;
+}
+.color-code.no-sql {
+  background-color: #5c90e0;
 }
 .color-code.active {
   background-color: rgba(255, 255, 255, 0.6);
@@ -584,6 +593,48 @@ table.table-image a {
 .pagination-holder .pagination-numbers.selected {
   color: #f2f2f2;
   font-size: 16px;
+}
+.sequence-block {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin: 25px 0;
+}
+.sequence-block .bullet-block {
+  display: table-cell;
+  padding-right: 10px;
+  width: 2.5em;
+}
+.sequence-block .bullet-block .sequence-step {
+  text-align: center;
+  background-color: #e58e21;
+  color: #fff;
+  width: 24px;
+  font-weight: 700;
+  height: 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.sequence-block .bullet-block .sequence-step:before {
+  box-sizing: border-box;
+}
+.sequence-block .sequence-section .highlight-sh {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.sequence-block .sequence-section .highlight-sh .highlight .pre-sequence-block {
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  border-left: 5px solid rgba(255, 255, 255, 0.6) !important;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #353535;
 }
 .box-input .js .inputfile {
   width: 0.1px;
