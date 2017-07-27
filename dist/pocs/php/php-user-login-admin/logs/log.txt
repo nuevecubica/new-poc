@@ -7,3 +7,4 @@
 22/22/2017 15:22:41 | <span class="logout">Logout</span>: <span class='log-message'>Juan Herrera</span>
 22/23/2017 15:23:48 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
 22/11/2017 19:11:30 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
+26/18/2017 11:18:14 | <span class="login">Login</span>: <span class='log-message'>Alex Vaught </span>
