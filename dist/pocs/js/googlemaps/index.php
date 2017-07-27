@@ -122,7 +122,7 @@ include_once('../../poc_footer.php')
     function initMap() {
         var locations = [
             ['Torre Mayor', 19.424172, -99.1777447, "Av. Reforma 505, piso 51 Col. Cuauhtémoc 06500, Ciudad de México", "Lunes - Viernes"],
-            ['Torre Diana', 19.4265043, -99.1742066, "Río Lerma 232, piso 7 (Sky Lobby) Col. Cuauhtémoc 06500, Ciudad de México", "Sabados"],
+           ['Torre Diana', 19.4265043, -99.1742066, "Río Lerma 232, piso 7 (Sky Lobby) Col. Cuauhtémoc 06500, Ciudad de México", "Sabados"],
             ['Trading Room', 19.3245633, -99.2567895, 'Av. de las Torres No. 131, Alvaro Obregón, Olivar de los Padres, Torres de potrero, 01780 CDMX', 'Lunes - Sabado']
         ];
 
@@ -188,7 +188,15 @@ include_once('../../poc_footer.php')
         map.panToBounds(bounds);
 
         var listener = google.maps.event.addListener(map, "idle", function () {
-            //map.setZoom(14);
+
+            if (locations.length > 1) {
+                //alert('es mayor a 1');
+                //map.setZoom();
+            } else {
+                //alert('menor a de uno');
+                map.setZoom(16);
+            }
+
             google.maps.event.removeListener(listener);
         });
 
@@ -196,7 +204,8 @@ include_once('../../poc_footer.php')
     }
 
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUifmC1LAVX3NuMTnesNX8lbLEUqjNIcQ&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUifmC1LAVX3NuMTnesNX8lbLEUqjNIcQ&callback=initMap" async
+        defer></script>
 <script>
     $(document).ready(function () {
         $('pre code').each(function (i, block) {
