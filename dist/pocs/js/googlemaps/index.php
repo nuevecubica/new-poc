@@ -190,10 +190,7 @@ include_once('../../poc_footer.php')
         var listener = google.maps.event.addListener(map, "idle", function () {
 
             if (locations.length > 1) {
-                //alert('es mayor a 1');
-                //map.setZoom();
             } else {
-                //alert('menor a de uno');
                 map.setZoom(16);
             }
 
