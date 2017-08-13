@@ -56,6 +56,8 @@ include_once('../poc_header.php');
     test
     > use learning_mongo
     switched to db learning_mongo
+    db.learning_mongo.insert({"leason":"leason No. 1"})
+
 
                             </div>
                         </div>

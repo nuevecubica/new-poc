@@ -1,0 +1,92 @@
+<style>
+    .form-holder {
+    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+        margin: 10px auto;
+        font-family: 'Source Sans Pro', sans-serif;
+        max-width: 500px;
+        padding: 10px;
+        color: #777777;
+        border-radius: 6px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.2), 0 0 0 12px rgba(222, 226, 211, 0.8);
+
+    }
+    .form-header span{
+        font-size: 16px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    b {
+        color: #444444;
+    }
+
+    .form-header {
+        background-color: #3f5062;
+        color: white;
+        text-align: left;
+        padding: 10px;
+    }
+
+    section h2 {
+        background-color: #6c6c6c;
+        color: white;
+        padding: 4px;
+    }
+</style>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="http://risk.incognitaterra.net/">
+</head>
+<body>
+<div class="form-holder">
+    <div class="form-header">
+        <h1>Riskmathiics Inscripción</h1>
+        <span>". $program ."</span>
+    </div>
+    <section>
+        <h2>Datos del Participante</h2>
+        <ul>
+            <li><p><b>Programa: </b>".$program."</p></li>
+            <li><p><b>Nombre: </b>".$firstName."</p></li>
+            <li><p><b>Apellidos: </b>".$lastName."</p></li>
+            <li><p><b>Email: </b>".$email."</p></li>
+            <li><p><b>Telefono movile: </b>".$telMovil."</p></li>
+            <li><p><b>Telefono Hogar: </b>".$telHome."</p></li>
+            <li><p><b>Teléfono Oficina: </b>".$telOffice."</p></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Datos del Pago</h2>
+        <ul>
+            <li><p><b>Razon Social: </b>".$razon_social."</p></li>
+            <li><p><b>RFC: </b>".$rfc."</p></li>
+            <li><p><b>Calle: </b>".$calle."</p></li>
+            <li><p><b>Delegacion: </b>".$delegacion."</p></li>
+            <li><p><b>Colonia: </b>".$colonia."</p></li>
+            <li><p><b>Pais: </b>".$pais."</p></li>
+            <li><p><b>Estado: </b>".$estado."</p></li>
+            <li><p><b>Información Adicional: </b>".$info."</p></li>
+            <li><p><b>Número de Cuenta: </b>".$cuenta_digitos."</p></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contacto</h2>
+        <ul>
+            <li><p><b>nombre: </b>".$contacto_nombre."</p></li>
+            <li><p><b>Cargo: </b>".$contacto_cargo."</p></li>
+            <li><p><b>Correo: </b>".$contacto_correo."</p></li>
+            <li><p><b>Delegación : </b>".$contacto_del."</p></li>
+            <li><p><b>Telefono: </b>".$contacto_tel."</p></li>
+            <li><p><b>Telefono Alterno: </b>".$contacto_tel_alter."</p></li>
+        </ul>
+    </section>
+
+</div>
+</body>
+</html>
