@@ -56,11 +56,8 @@ include_once('../../../poc_header.php');
                 }]
             }
         }
-
-
-
-
     });
+
     var oilCanvas = document.getElementById("oilChart");
 
     Chart.defaults.global.defaultFontFamily = "Open Sans";
@@ -115,7 +112,6 @@ include_once('../../../poc_header.php');
             animateScale: true
         }
     };
-
     var pieChart = new Chart(oilCanvas, {
         type: 'doughnut',
         data: oilData,
