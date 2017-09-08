@@ -16,7 +16,7 @@ include_once('../poc_header.php');
                     <div class="highlight-sh">
                         <div class="highlight">
                             <div class="pre-sequence-block">
-    mongo
+                                mongo
                             </div>
                         </div>
                     </div>
@@ -30,13 +30,13 @@ include_once('../poc_header.php');
                         <div class="highlight">
                             <div class="pre-sequence-block">
 
-    > db
-    test
-    > use learning_mongo
-    switched to db learning_mongo
-    > db.cars.insert({"make":"Subaru","make":"Bora"})
-    show collections
-    > cars
+                                > db
+                                test
+                                > use learning_mongo
+                                switched to db learning_mongo
+                                > db.cars.insert({"make":"Subaru","make":"Bora"})
+                                show collections
+                                > cars
 
 
                             </div>
@@ -45,25 +45,33 @@ include_once('../poc_header.php');
                 </div>
                 <div class="spacer"></div>
                 <div class="sequence-section">
-                    <h4>Lets create a </h4>
+                    <h4>Lets create a database</h4>
                     <p>Type <strong>db</strong> to check at whitch database are you position. this will show you that your are at tse db.</p>
                     <p>you can change to a database by issuing <strong>use learning_mongo</strong> for example</p>
                     <div class="highlight-sh">
                         <div class="highlight">
                             <div class="pre-sequence-block">
 
-    > db
-    test
-    > use learning_mongo
-    switched to db learning_mongo
-    db.learning_mongo.insert({"leason":"leason No. 1"})
+                                > db
+                                test
+                                > use learning_mongo
+                                switched to db learning_mongo
+                                db.learning_mongo.insert({"leason":"leason No. 1"})
 
 
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>//block
+            </div>
+            <div class="spacer"></div>
+
+            <div class="sequence-section">
+                <h4>DROP DATA BASE</h4>
+            </div>
+
+
+            //block
 
         </article>
     </div>

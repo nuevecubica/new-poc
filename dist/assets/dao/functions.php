@@ -118,7 +118,7 @@ function log_actions($action, $message_log = "") {
 
     if ($handle = fopen($logfile, 'a')) {
 
-        $timestamp = strftime("%d/%M/%Y %H:%M:%S", time());
+        $timestamp = strftime("%d/%m/%Y %H:%M:%S", time());
         $content = "{$timestamp} | {$action}: {$message_log}\n";
 
         fwrite($handle, $content);

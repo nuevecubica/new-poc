@@ -49,6 +49,7 @@ If (isset($_POST['user_create'])) {
 }
 
 ?>
+<div id="fb-root"></div>
     <div class="app-holder">
         <article>
             <!-- <button class="btn back-tut "><a href="index.php"><i class="fa fa-arrow-circle-o-left"></i> Go back to Tutorial</a></button>-->
@@ -71,10 +72,10 @@ If (isset($_POST['user_create'])) {
 
                         <button class="btn btn-primary" type="submit" name="user-login">Enviar</button>
                     </div>
-                    <!--<div class="form-zone form-zone-fb">
+                   <div class="form-zone form-zone-fb">
                         <p>Ingresa con tu cuenta de Facebook</p>
                         <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
-                    </div>-->
+                    </div>
                 </form>
                 <div class="form-zone">
                     <p><?php echo output_message($message); ?></p>
@@ -120,3 +121,12 @@ if (isset($db)) {
 include_layout_element('poc_footer.php');
 
 ?>
+
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1956178577945996";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
