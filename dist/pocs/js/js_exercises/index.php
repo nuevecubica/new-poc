@@ -44,13 +44,20 @@ include_once('../../poc_header.php');
                 </code>
             </pre>
     </article>
+    <article>
+        <h2>test script</h2>
+        <script>
+
+
+        </script>
+    </article>
 </div>
 
 <?php include_once('../../poc_footer.php'); ?>
 <script>
     $(document).ready(function () {
 
-        var boxtext =  'you click me';
+        var boxtext = 'you click me';
 
         $("[rel *='btn-click']").click(function () {
             $("[rel *='box']").append(' - ', boxtext);

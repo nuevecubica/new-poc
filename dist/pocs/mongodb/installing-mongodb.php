@@ -77,7 +77,7 @@ include_once('../poc_header.php');
         </div>
         <div class="sequence-block">
             <div class="bullet-block">
-                <div class="sequence-step">4</div>
+                <div class="sequence-step">5</div>
             </div>
             <div class="sequence-section">
                 <h4>Start using MongoDB</h4>
