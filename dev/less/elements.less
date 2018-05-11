@@ -8,7 +8,7 @@ body {
 
 h1, h2, h3 {
   font-family: 'Josefin Sans', sans-serif;
-  &.error-php{
+  &.error-php {
     color: @orange;
     text-align: center;
   }
@@ -18,23 +18,32 @@ strong {
   color: @highlight;
 }
 
-
 em {
   color: @emphasize;
 }
-a{
-  text-decoration: none;
-  cursor:pointer;
-  &:hover{
-    text-decoration: none;
-  }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: red;
+    
+  }
+  &.link-btn {
+    color: @white;
+    a {
+      &:hover {
+        color: @white !important;
+      }
+    }
+  }
 }
 
-span{
-  &.span-code{
+span {
+  &.span-code {
     color: @light-yellow;
-    b{
+    b {
       color: @green;
       font-weight: bold;
       font-size: 14px;
@@ -42,7 +51,7 @@ span{
   }
 }
 
-.message{
+.message {
   text-align: center;
   color: @orange;
 }

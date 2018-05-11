@@ -1,3 +1,8 @@
+.btn{
+  &:hover{
+    color: @white;
+  }
+}
 .btn-separation {
   margin: 5px;
 }
@@ -12,9 +17,10 @@ button {
   }
   &:hover{
     a{
-      color: @white
+      color: @white !important;
     }
   }
+
   &.right {
     float: right;
     background-color: @orange;
@@ -76,6 +82,12 @@ button {
     background-color: @dark-gray;
     &:hover {
       background-color: @dark-gray + 25;
+    }
+  }
+  &.css {
+    background-color: @dark-green;
+    &:hover {
+      background-color: @dark-green + 25;
     }
   }
   &.fx {

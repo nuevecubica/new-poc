@@ -15,6 +15,7 @@ if (isset($_POST['user-login'])) {
     $user_name = trim($_POST['user_name']);
     $user_password = trim($_POST['user_password']);
     $found_user = User::authenticate($user_name, $user_password);
+
     if ($found_user) {
         $session->login($found_user);
         log_actions('<span class="login">Login</span>', "<span class='log-message'>{$found_user->user_name} {$found_user->user_lastname} </span>");

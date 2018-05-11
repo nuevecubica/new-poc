@@ -2,6 +2,9 @@
 .superShadow {
   text-shadow: 0 1px 0 #c9cfce, 0 2px 0 #bcc2c2, 0 3px 0 #afb6b6, 0 4px 0 #a4adac, 0 5px 0 #9fa8a7, 0 6px 0 #99a3a2, 0 7px 0 #97a1a0, 0 8px 0 #949e9d, 0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
 }
+.btn:hover {
+  color: #f2f2f2;
+}
 .btn-separation {
   margin: 5px;
 }
@@ -14,7 +17,7 @@ button a {
   color: white;
 }
 button:hover a {
-  color: #f2f2f2;
+  color: #f2f2f2 !important;
 }
 button.right {
   float: right;
@@ -77,6 +80,12 @@ button.html5 {
 }
 button.html5:hover {
   background-color: #666666;
+}
+button.css {
+  background-color: #648563;
+}
+button.css:hover {
+  background-color: #7d9e7c;
 }
 button.fx {
   background-color: #1d2731;
@@ -164,6 +173,13 @@ a {
 }
 a:hover {
   text-decoration: none;
+  color: red;
+}
+a.link-btn {
+  color: #f2f2f2;
+}
+a.link-btn a:hover {
+  color: #f2f2f2 !important;
 }
 span.span-code {
   color: #f6e187;
@@ -548,6 +564,9 @@ table.table-image a {
 }
 .pagination-buttons:hover {
   background-color: #65a7ff;
+}
+.pagination-holder {
+  margin: 10px 0px;
 }
 .pagination-holder .prev-btn {
   color: white;
